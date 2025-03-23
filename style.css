@@ -9,22 +9,49 @@ body {
     padding: 0;
 }
 
+/* Cabeçalho fixo */
+.sticky-header {
+    position: fixed;
+    width: 100%;
+    background: rgba(0, 123, 255, 0.9);
+    padding: 15px;
+    color: white;
+    text-align: center;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: background 0.3s ease-in-out;
+}
+
+.sticky-header nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.sticky-header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.sticky-header nav ul li a:hover {
+    text-decoration: underline;
+}
+
 /* Container */
 .container {
     width: 90%;
     max-width: 800px;
-    margin: 50px auto;
+    margin: 100px auto 20px;
     padding: 20px;
     background: white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-}
-
-/* Efeito de fade-in */
-.fade-in {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
 /* Botões animados */
@@ -44,9 +71,22 @@ body {
     background: #0056b3;
 }
 
+/* Efeito de fade-in */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
 /* Responsividade */
 @media (max-width: 768px) {
-    .container {
-        width: 95%;
+    .sticky-header nav ul {
+        flex-direction: column;
+        gap: 10px;
     }
 }
+
+#sobre {
+    margin-top: 100px; /* Ajusta o valor conforme necessário */
+}
+
