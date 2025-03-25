@@ -4,59 +4,545 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Currículo - Diogo Duarte</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        /* CSS do Botão de Tradução */
+        #translateBtn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 8px 15px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+            z-index: 1000;
+        }
+
+        #translateBtn:hover {
+            background: #0056b3;
+        }
+
+        /* Estilos da Nova Seção com Imagem */
+        .media-section {
+            margin: 40px 0;
+        }
+
+        .media-content {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .project-image {
+            width: 400px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .media-text {
+            flex: 1;
+        }
+
+        @media (max-width: 768px) {
+            .media-content {
+                flex-direction: column;
+            }
+            .project-image {
+                width: 100%;
+                max-width: 500px;
+            }
+        }
+
+        /* Restante do CSS existente */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        header img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #0056b3;
+        }
+
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 1s ease-in forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+
+
+/* Cores Oficiais dos Softwares */
+.premiere .progress-circle { background: conic-gradient(#FF0000 100%, #f0f0f0 0); }
+.after-effects .progress-circle { background: conic-gradient(#7D00FF 90%, #f0f0f0 0); }
+.photoshop .progress-circle { background: conic-gradient(#00B0F0 90%, #f0f0f0 0); }
+.illustrator .progress-circle { background: conic-gradient(#FF7F00 80%, #f0f0f0 0); }
+.xd .progress-circle { background: conic-gradient(#FF61F6 90%, #f0f0f0 0); }
+.lightroom .progress-circle { background: conic-gradient(#2D0A4D 90%, #f0f0f0 0); }
+.uxui .progress-circle { background: conic-gradient(#666666 90%, #f0f0f0 0); }
+.figma .progress-circle { background: conic-gradient(#0ACF83 80%, #f0f0f0 0); }
+
+/* Estrutura do Layout */
+.skills-grid {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+}
+
+.skill-column {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 220px;
+}
+
+.skill-item {
+    text-align: center;
+    padding: 15px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    transition: transform 0.3s;
+}
+
+.skill-item:hover {
+    transform: translateY(-5px);
+}
+
+.progress-circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    position: relative;
+}
+
+.progress-inner {
+    width: 80px;
+    height: 80px;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.percentage {
+    font-size: 18px;
+    font-weight: 700;
+    color: #2c3e50;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.skill-label {
+    font-size: 14px;
+    color: #444;
+    font-weight: 600;
+    margin: 10px 0 0;
+}
+
+@media (max-width: 768px) {
+    .skills-grid {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .skill-column {
+        width: 100%;
+        gap: 20px;
+    }
+    
+    .progress-circle {
+        width: 90px;
+        height: 90px;
+    }
+    
+    .progress-inner {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+
+
+
+
+/* Animations */
+.hidden {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 1s ease-out;
+        }
+
+        .show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+
+
+
+
+        
+
+
+
+
+        
+    </style>
+
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script> <!-- Seu arquivo deve vir depois -->
+
+    </script>
 </head>
 <body>
+    <button id="translateBtn">EN</button>
 
     <div class="container">
         <header class="fade-in">
-            <img src="foto.jpg" alt="Diogo Duarte">
             <h1>Diogo Duarte</h1>
-            <h2>Graphic Designer & Web Developer</h2>
-            <p>📍 Portugal | ✉️ diogo.silvanoduarte@gmail.com | 📞 933 402 201</p>
-        </header>
+            <h2 data-translate="Titulo Profissao">Graphic Designer & Web Developer</h2>
+            <p>📍 <span data-translate="Localizacao">Portugal</span> | ✉️ diogo.silvanoduarte@gmail.com | 📞 933 402 201</p>
+        </header><header class="top-section">
+    <div class="fade-in" class="profile-image" >
+        <img src="foto.png" alt="Foto de Perfil">
+    </div>
+</header>
 
         <section id="sobre" class="fade-in">
-            <h2>Sobre Mim</h2>
-            <p>Sou um Designer Gráfico e Multimédia apaixonado, com experiência em Adobe Illustrator, Photoshop, After Effects e Premiere. 
-            Tenho experiência em motion graphics, branding e criação de conteúdo digital para mídias impressas e digitais.</p>
-            <p>Além do design, também tenho experiência em **Front-end e Back-end**, com conhecimento sólido em **HTML, CSS, e desenvolvimento web**. 
-            Gosto de combinar design e tecnologia para criar interfaces intuitivas e funcionais.</p>
+            <h2 data-translate="Sobre Mim">Sobre Mim</h2>
+            <p data-translate="Descricao Sobre Mim 1">Sou um Designer Gráfico e Multimédia apaixonado, com experiência em Adobe Illustrator, Photoshop, After Effects e Premiere. Tenho experiência em motion graphics, branding e criação de conteúdo digital para mídias impressas e digitais.</p>
+            <p data-translate="Descricao Sobre Mim 2">Além do design, também tenho experiência em Front-end e Back-end, com conhecimento sólido em HTML, CSS, e desenvolvimento web. Gosto de combinar design e tecnologia para criar interfaces intuitivas e funcionais.</p>
         </section>
 
         <section id="experiencia" class="fade-in">
-            <h2>Experiência Profissional</h2>
+            <h2 data-translate="Experiencia Profissional">Experiência Profissional</h2>
             <div class="job">
-                <h3>Graphic Designer - Restart</h3>
-                <p><strong>Março 2022 - Agosto 2022</strong></p>
-                <p>Responsável pelo design de layouts para materiais digitais e impressos, como logos e embalagens. 
-                Criação de composições visuais equilibradas e colaboração com equipas de diferentes departamentos.</p>
+                <h3 data-translate="Cargo Restart">Graphic Designer - Restart</h3>
+                <p><strong data-translate="Data Restart">Março 2022 - Agosto 2022</strong></p>
+                <p data-translate="Descricao Restart">Responsável pelo design de layouts para materiais digitais e impressos, como logos e embalagens. Criação de composições visuais equilibradas e colaboração com equipas de diferentes departamentos.</p>
             </div>
             <div class="job">
-                <h3>IT Technician - Knowledge Academy</h3>
-                <p><strong>Março 2019 - Agosto 2019</strong></p>
-                <p>Suporte e gestão de produtos de TI, assistência na organização de documentos, treinamento de funcionários em aplicações Microsoft e atendimento ao cliente.</p>
+                <h3 data-translate="Cargo Knowledge">IT Technician - Knowledge Academy</h3>
+                <p><strong data-translate="Data Knowledge">Março 2019 - Agosto 2019</strong></p>
+                <p data-translate="Descricao Knowledge">Suporte e gestão de produtos de TI, assistência na organização de documentos, treinamento de funcionários em aplicações Microsoft e atendimento ao cliente.</p>
             </div>
+        </section>
+
+
+
+
+
+
+
+      <!-- Adicione esta seção após a experiência profissional -->
+<section class="skills-section fade-in">
+    <h2 data-translate="Habilidades">HABILIDADES</h2>
+    
+    <div class="skills-grid" class="fade-in">
+        <!-- Coluna 1 -->
+        <div class="skill-column">
+            <!-- Adobe Premiere Pro -->
+            <div class="skill-item premiere reveal">
+                <div class="progress-circle" style="--percent: 90">
+                    <div class="progress-inner">
+                        <span class="percentage">10/10</span>
+                    </div>
+                </div>
+                <p class="skill-label">Adobe Premiere</p>
+            </div>
+
+            <!-- After Effects -->
+            <div class="skill-item after-effects reveal">
+                <div class="progress-circle" style="--percent: 90">
+                    <div class="progress-inner">
+                        <span class="percentage">9/10</span>
+                    </div>
+                </div>
+                <p class="skill-label">After Effects</p>
+            </div>
+
+            <!-- Photoshop -->
+            <div class="skill-item photoshop reveal">
+                <div class="progress-circle" style="--percent: 90">
+                    <div class="progress-inner">
+                        <span class="percentage">9/10</span>
+                    </div>
+                </div>
+                <p class="skill-label">Photoshop</p>
+            </div>
+
+            <!-- Illustrator -->
+            <div class="skill-item illustrator reveal">
+                <div class="progress-circle" style="--percent: 90">
+                    <div class="progress-inner">
+                        <span class="percentage">8/10</span>
+                    </div>
+                </div>
+                <p class="skill-label">Adobe Illustrator</p>
+            </div>
+        </div>
+
+        <!-- Coluna 2 -->
+        <div class="skill-column">
+            <!-- Adobe XD -->
+            <div class="skill-item xd reveal">
+                <div class="progress-circle" style="--percent: 90">
+                    <div class="progress-inner">
+                        <span class="percentage">9/10</span>
+                    </div>
+                </div>
+                <p class="skill-label">Adobe XD</p>
+            </div>
+
+            <!-- Lightroom -->
+            <div class="skill-item lightroom reveal">
+                <div class="progress-circle" style="--percent: 90">
+                    <div class="progress-inner">
+                        <span class="percentage">9/10</span>
+                    </div>
+                </div>
+                <p class="skill-label">Lightroom</p>
+            </div>
+
+            <!-- UX/UI -->
+            <div class="skill-item uxui reveal">
+                <div class="progress-circle" style="--percent: 90">
+                    <div class="progress-inner">
+                        <span class="percentage">9/10</span>
+                    </div>
+                </div>
+                <p class="skill-label">UX/UI</p>
+            </div>
+
+            <!-- Figma -->            
+            <div class="skill-item figma reveal">
+                <div class="progress-circle" style="--percent: 90">
+                    <div class="progress-inner">
+                        <span class="percentage">8/10</span>
+                    </div>
+                </div>
+                <p class="skill-label">Figma</p>
+            </div>
+
+            
+        </div>
+    </div>
+</section>
+
+
+
+
+       <!-- Seção do Banner Promocional -->
+    <section class="media-section fade-in">
+        <div class="media-content">
+            <div class="media-text">
+                <h2 data-translate="Banner Titulo">BANNER PROMOCIONAL</h2>
+                <p>
+                    <strong data-translate="Banner Destaque">SUMO NATURAL</strong><br><br>
+                    <span data-translate="Banner Texto 1">Projeto desenvolvido na minha licenciatura em Engenharia Multimédia para criar um banner promocional de sumo natural.</span><br><br>
+                    <span data-translate="Banner Texto 2">Utilizando Adobe Illustrator e Photoshop, combinei fotografia, tipografia e elementos gráficos para criar um design dinâmico e envolvente.</span>
+                </p>
+            </div>
+            <img src="Design sem nome.png" alt="Design Work Sample" class="project-image">
+        </div>
+    </section>
+
+
+
+
+
+
+
+        <!-- Seção do Hot Dog -->
+    <section class="media-section fade-in">
+        <div class="media-content">
+            <img src="hotdog-project.png.jpg" alt="Design Work Sample" class="project-image">
+            <div class="media-text">
+                <h2 data-translate="Hotdog Titulo">HOT DOG CARTOON</h2>
+                <p>
+                    <strong data-translate="Hotdog Destaque">1920s STYLE</strong><br><br>
+                    <span data-translate="Hotdog Descricao">Criei um personagem de cachorro-quente animado inspirado no estilo rubber hose dos anos 1920, utilizando Adobe Illustrator.</span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+
+
+        <section class="media-section fade-in">
+            <h2 data-translate="Video Demo">COUTDOWN MOTIVACIONAL</h2>
+         <p data-translate="Video Description">
+             <strong>VIDEO EDITADO</strong><br><br>
+             Editei um vídeo motivacional com contagem regressiva, combinando visuais dinâmicos, música inspiradora e transições suaves. Usei Adobe Premiere Pro e After Effects para criar um ritmo envolvente e empolgante.<br><br>
+            </p>
+        </section>
+
+
+
+
+
+
+        <section class="video fade-in">
+            <h2 data-translate="Exemplo Trabalho">Exemplo de Trabalho</h2>
+            <iframe src="https://drive.google.com/file/d/1ylMKtPwvgrdQcVICalhKIExDm8XX2nRk/preview" 
+                    width="100%" 
+                    height="400" 
+                    allow="autoplay"></iframe>
         </section>
 
         <section id="portfolio" class="fade-in">
-            <h2>Portfólio</h2>
-            <p><a href="https://drive.google.com/file/d/1ONiWYP3zuz4WTdBUzhc38hcJ2kWQsCis/view" target="_blank" class="btn">🎨 Ver Portfólio</a></p>
+            <h2 data-translate="Portfolio">Portfólio</h2>
+            <p><a href="https://drive.google.com/file/d/1ONiWYP3zuz4WTdBUzhc38hcJ2kWQsCis/view" target="_blank" class="btn" data-translate="Ver Portfolio">🎨 Ver Portfólio</a></p>
         </section>
 
         <section id="curriculo" class="fade-in">
-            <h2>Currículo</h2>
-            <a href="https://drive.google.com/uc?export=download&id=1-Qxj8nScjs9hfzQpkMtO2ZIM0ep5720j" class="btn">📄 Baixar Currículo</a>
-        </section>
-
-        <section class="video fade-in">
-            <h2>Exemplo de Trabalho</h2>
-            <iframe src="https://drive.google.com/file/d/1ylMKtPwvgrdQcVICalhKIExDm8XX2nRk/preview" width="100%" height="400" allow="autoplay"></iframe>
+            <h2 data-translate="Curriculo">Currículo</h2>
+            <a href="https://drive.google.com/uc?export=download&id=1-Qxj8nScjs9hfzQpkMtO2ZIM0ep5720j" class="btn" data-translate="Baixar Curriculo">📄 Baixar Currículo</a>
         </section>
     </div>
 
-    <script src="script.js"></script>
+    <script>
+
+
+        
+        // Traduções
+        const translations = {
+            "pt-BR": {
+                // Traduções existentes
+                "Titulo Profissao": "Graphic Designer & Web Developer",
+                "Localizacao": "Portugal",
+                "Sobre Mim": "Sobre Mim",
+                "Descricao Sobre Mim 1": "Sou um Designer Gráfico e Multimédia apaixonado, com experiência em Adobe Illustrator, Photoshop, After Effects e Premiere. Tenho experiência em motion graphics, branding e criação de conteúdo digital para mídias impressas e digitais.",
+                "Descricao Sobre Mim 2": "Além do design, também tenho experiência em Front-end e Back-end, com conhecimento sólido em HTML, CSS, e desenvolvimento web. Gosto de combinar design e tecnologia para criar interfaces intuitivas e funcionais.",
+                "Experiencia Profissional": "Experiência Profissional",
+                "Cargo Restart": "Graphic Designer - Restart",
+                "Data Restart": "Março 2022 - Agosto 2022",
+                "Descricao Restart": "Responsável pelo design de layouts para materiais digitais e impressos, como logos e embalagens. Criação de composições visuais equilibradas e colaboração com equipas de diferentes departamentos.",
+                "Cargo Knowledge": "IT Technician - Knowledge Academy",
+                "Data Knowledge": "Março 2019 - Agosto 2019",
+                "Descricao Knowledge": "Suporte e gestão de produtos de TI, assistência na organização de documentos, treinamento de funcionários em aplicações Microsoft e atendimento ao cliente.",
+                "Portfolio": "Portfólio",
+                "Ver Portfolio": "🎨 Ver Portfólio",
+                "Curriculo": "Currículo",
+                "Baixar Curriculo": "📄 Baixar Currículo",
+                "Exemplo Trabalho": "Exemplo de Trabalho",
+                
+                // Novas traduções
+                "Banner Titulo": "BANNER PROMOCIONAL",
+                "Banner Destaque": "SUMO NATURAL",
+                "Banner Texto 1": "Projeto desenvolvido na minha licenciatura em Engenharia Multimédia para criar um banner promocional de sumo natural.",
+                "Banner Texto 2": "Utilizando Adobe Illustrator e Photoshop, combinei fotografia, tipografia e elementos gráficos para criar um design dinâmico e envolvente.",
+                "Hotdog Titulo": "HOT DOG CARTOON",
+                "Hotdog Destaque": "1920s STYLE",
+                "Hotdog Descricao": "Criei um personagem de cachorro-quente animado inspirado no estilo rubber hose dos anos 1920, utilizando Adobe Illustrator.vetorização e refinamento de detalhes para alcançar uma estética vintage. Este projeto desafiou-me a equilibrar nostalgia com originalidade, resultando em um personagem divertido e dinâmico cheio de personalidade.",
+                "Video Titulo": "COUTDOWN MOTIVACIONAL",
+                "Video Destaque": "VIDEO EDITADO",
+                "Video Descricao": "Editei um vídeo motivacional com contagem regressiva, combinando visuais dinâmicos, música inspiradora e transições suaves."
+            },
+            "en": {
+                // Existing translations
+                "Titulo Profissao": "Graphic Designer & Web Developer",
+                "Localizacao": "Portugal",
+                "Sobre Mim": "About Me",
+                "Descricao Sobre Mim 1": "I am a passionate Graphic and Multimedia Designer with experience in Adobe Illustrator, Photoshop, After Effects, and Premiere. Skilled in motion graphics, branding, and digital content creation for both print and digital media.",
+                "Descricao Sobre Mim 2": "Beyond design, I also have experience in Front-end and Back-end development, with solid knowledge of HTML, CSS, and web development. I enjoy combining design and technology to create intuitive and functional interfaces.",
+                "Experiencia Profissional": "Professional Experience",
+                "Cargo Restart": "Graphic Designer - Restart",
+                "Data Restart": "March 2022 - August 2022",
+                "Descricao Restart": "Responsible for designing layouts for digital and print materials, including logos and packaging. Created balanced visual compositions and collaborated with cross-departmental teams.",
+                "Cargo Knowledge": "IT Technician - Knowledge Academy",
+                "Data Knowledge": "March 2019 - August 2019",
+                "Descricao Knowledge": "IT product support and management, document organization assistance, Microsoft applications training for staff, and customer service.",
+                "Portfolio": "Portfolio",
+                "Ver Portfolio": "🎨 View Portfolio",
+                "Curriculo": "Resume",
+                "Baixar Curriculo": "📄 Download Resume",
+                "Exemplo Trabalho": "Work Sample",
+                
+                // New translations
+                "Banner Titulo": "PROMOTIONAL BANNER",
+                "Banner Destaque": "NATURAL JUICE",
+                "Banner Texto 1": "Project developed during my Multimedia Engineering degree to create a promotional banner for natural juice.",
+                "Banner Texto 2": "Using Adobe Illustrator and Photoshop, I combined photography, typography and graphic elements to create a dynamic and engaging design.",
+                "Hotdog Titulo": "HOT DOG CARTOON",
+                "Hotdog Destaque": "1920s STYLE",
+                "Hotdog Descricao": "I Created an animated hot dog character inspired by 1920s rubber hose style using Adobe Illustrator.vectorizing, and refining details to achieve a vintage aesthetic. This project challenged me to balance nostalgia with originality, resulting in a fun and dynamic character full of personality.",
+                "Video Titulo": "MOTIVATIONAL COUNTDOWN",
+                "Video Destaque": "EDITED VIDEO",
+                "Video Descricao": "Edited a motivational countdown video combining dynamic visuals, inspiring music and smooth transitions."
+            }
+        };
+        // ... (mantenha o resto do JavaScript) ...
+
+        function toggleLanguage() {
+            const html = document.documentElement;
+            const currentLang = html.getAttribute('lang');
+            const newLang = currentLang === 'pt-BR' ? 'en' : 'pt-BR';
+            
+            html.setAttribute('lang', newLang);
+            document.getElementById('translateBtn').textContent = newLang === 'en' ? 'PT' : 'EN';
+            
+            document.querySelectorAll('[data-translate]').forEach(element => {
+                const key = element.getAttribute('data-translate');
+                element.textContent = translations[newLang][key];
+            });
+        }
+
+        document.getElementById('translateBtn').addEventListener('click', toggleLanguage);
+    </script>
 </body>
 </html>

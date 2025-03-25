@@ -90,3 +90,62 @@ body {
     margin-top: 100px; /* Ajusta o valor conforme necessário */
 }
 
+#translateBtn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 8px 15px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#translateBtn:hover {
+    background: #0056b3;
+}
+
+.media-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+    gap: 20px;
+}
+
+.media-text {
+    flex: 1;
+    text-align: left;
+}
+
+.project-image {
+    flex: 1;
+    max-width: 50%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .media-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .project-image {
+        max-width: 100%;
+    }
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}

@@ -1,10 +1,12 @@
 document.addEventListener("DOMContentLoaded", function() {
-    gsap.from(".sticky-header", { duration: 1, y: -100, opacity: 0, ease: "bounce" });
-
+    // Registra o plugin ScrollTrigger
+    gsap.registerPlugin(ScrollTrigger);
+    
+    // Configura as animações para todos os elementos com classe fade-in
     gsap.utils.toArray(".fade-in").forEach((section) => {
-        gsap.to(section, {
-            opacity: 1,
-            y: 0,
+        gsap.from(section, {
+            opacity: 0,
+            y: 50,
             duration: 1,
             scrollTrigger: {
                 trigger: section,
@@ -13,5 +15,20 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
     });
-});
 
+    // Configura o IntersectionObserver para os elementos reveal
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+            }
+        });
+    }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -100px 0px'
+    });
+
+    document.querySelectorAll('.reveal').forEach((element) => {
+        observer.observe(element);
+    });
+});
