@@ -3,546 +3,1574 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Currículo - Diogo Duarte</title>
+    <title>Diogo Duarte - Graphic Designer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* CSS do Botão de Tradução */
-        #translateBtn {
+        :root {
+            --primary-color: #d13a1f;
+            --text-light: #ffffff;
+            --premiere-color: #EA77FF;
+            --illustrator-color: #FF9A00;
+            --aftereffects-color: #0000FF;
+            --photoshop-color: #31A8FF;
+            --uiux-color: #6D6DFF;
+            --html-color: #E44D26;
+            --css-color: #264DE4;
+            --js-color: #F0DB4F;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-image: url('img/background.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            line-height: 1.6;
+            color: var(--text-light);
+            position: relative;
+            padding-bottom: 60px;
+            min-height: 100vh;
+        }
+
+        .navbar {
             position: fixed;
-            top: 20px;
-            right: 20px;
-            padding: 8px 15px;
-            background: #007bff;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background 0.3s;
+            top: 0;
+            width: 100%;
+            padding: 1.5rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--primary-color);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
             z-index: 1000;
         }
 
-        #translateBtn:hover {
-            background: #0056b3;
+        .menu-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+            z-index: 1001;
         }
 
-        /* Estilos da Nova Seção com Imagem */
-        .media-section {
-            margin: 40px 0;
+        .menu-icon {
+            display: block;
+            width: 35px;
+            height: 3px;
+            background: var(--text-light) !important;
+            margin: 6px 0;
+            transition: 0.4s;
         }
 
-        .media-content {
-            display: flex;
-            gap: 30px;
-            align-items: center;
+        .menu-btn.active .menu-icon:nth-child(1) {
+            transform: translateY(9px) rotate(45deg);
         }
 
-        .project-image {
-            width: 400px;
-            height: auto;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
-
-        .media-text {
-            flex: 1;
-        }
-
-        @media (max-width: 768px) {
-            .media-content {
-                flex-direction: column;
-            }
-            .project-image {
-                width: 100%;
-                max-width: 500px;
-            }
-        }
-
-        /* Restante do CSS existente */
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 20px;
-            background-color: #f5f5f5;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-
-        header {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        header img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            margin-bottom: 20px;
-        }
-
-        section {
-            margin-bottom: 30px;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 10px 20px;
-            background: #007bff;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background 0.3s;
-        }
-
-        .btn:hover {
-            background: #0056b3;
-        }
-
-        .fade-in {
+        .menu-btn.active .menu-icon:nth-child(2) {
             opacity: 0;
-            animation: fadeIn 1s ease-in forwards;
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+        .menu-btn.active .menu-icon:nth-child(3) {
+            transform: translateY(-9px) rotate(-45deg);
         }
 
+        .translate-btn {
+            background: none;
+            border: 1px solid var(--text-light);
+            padding: 8px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            color: var(--text-light);
+            transition: 0.3s;
+        }
 
+        .main-content {
+            margin-top: 15rem;
+            padding: 0 15% 4rem;
+        }
 
-/* Cores Oficiais dos Softwares */
-.premiere .progress-circle { background: conic-gradient(#FF0000 100%, #f0f0f0 0); }
-.after-effects .progress-circle { background: conic-gradient(#7D00FF 90%, #f0f0f0 0); }
-.photoshop .progress-circle { background: conic-gradient(#00B0F0 90%, #f0f0f0 0); }
-.illustrator .progress-circle { background: conic-gradient(#FF7F00 80%, #f0f0f0 0); }
-.xd .progress-circle { background: conic-gradient(#FF61F6 90%, #f0f0f0 0); }
-.lightroom .progress-circle { background: conic-gradient(#2D0A4D 90%, #f0f0f0 0); }
-.uxui .progress-circle { background: conic-gradient(#666666 90%, #f0f0f0 0); }
-.figma .progress-circle { background: conic-gradient(#0ACF83 80%, #f0f0f0 0); }
+        @keyframes fadeInFromLeft {
+            0% {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
 
-/* Estrutura do Layout */
-.skills-grid {
-    display: flex;
-    gap: 40px;
-    justify-content: center;
-}
-
-.skill-column {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    width: 220px;
-}
-
-.skill-item {
-    text-align: center;
-    padding: 15px;
-    background: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
-    transition: transform 0.3s;
-}
-
-.skill-item:hover {
-    transform: translateY(-5px);
-}
-
-.progress-circle {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin: 0 auto 15px;
-    position: relative;
-}
-
-.progress-inner {
-    width: 80px;
-    height: 80px;
-    background: white;
-    border-radius: 50%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
-}
-
-.percentage {
-    font-size: 18px;
-    font-weight: 700;
-    color: #2c3e50;
-    font-family: 'Segoe UI', sans-serif;
-}
-
-.skill-label {
-    font-size: 14px;
-    color: #444;
-    font-weight: 600;
-    margin: 10px 0 0;
-}
-
-@media (max-width: 768px) {
-    .skills-grid {
-        flex-direction: column;
-        gap: 20px;
-    }
-    
-    .skill-column {
-        width: 100%;
-        gap: 20px;
-    }
-    
-    .progress-circle {
-        width: 90px;
-        height: 90px;
-    }
-    
-    .progress-inner {
-        width: 70px;
-        height: 70px;
-    }
-}
-
-
-
-
-
-/* Animations */
-.hidden {
+        .name-line {
+            font-size: 9rem;
+            letter-spacing: 12px;
+            font-weight: 700;
+            margin: 0 0 1rem 0;
+            text-transform: uppercase;
+            color: var(--primary-color);
+            line-height: 0.85;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
             opacity: 0;
-            transform: translateY(50px);
-            transition: all 1s ease-out;
+            animation: fadeInFromLeft 1s ease-out forwards;
+            animation-iteration-count: 1;
         }
 
-        .show {
+        .name-line:first-child {
+            animation-delay: 0.09s;
+        }
+
+        .name-line:last-child {
+            animation-delay: 1s;
+        }
+
+        .title {
+            font-size: 3rem;
+            letter-spacing: 5px;
+            margin: 4rem 0 20rem 0;
+            color: var(--text-light);
+            font-weight: 400;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            opacity: 0;
+            animation: fadeInFromLeft 1.5s ease-out forwards;
+            animation-delay: 0.9s;
+            animation-iteration-count: 1;
+        }
+
+        .video-container {
+            width: 100%;
+            margin: 0 auto 8rem auto;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 1s ease, transform 1s ease;
+        }
+
+        .video-container.visible {
             opacity: 1;
             transform: translateY(0);
         }
 
+        .video-container video {
+            width: 100%;
+            display: block;
+        }
+
+        .side-menu {
+            position: fixed;
+            top: 0;
+            left: -28%;
+            width: 28%;
+            height: 100vh;
+            background: var(--primary-color);
+            box-shadow: 2px 0 15px rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
+            padding: 2rem;
+            z-index: 999;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .side-menu.active {
+            left: 0;
+        }
+
+        .menu-links {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+            margin-top: 3rem;
+        }
+
+        .menu-link {
+            color: var(--text-light);
+            text-decoration: none;
+            font-size: 0.95rem;
+            letter-spacing: 1.5px;
+            transition: color 0.3s;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid rgba(255,255,255,0.15);
+        }
+
+        .menu-link:hover {
+            color: #ffd7d0;
+        }
+
+        .section {
+            margin-top: 6rem;
+            scroll-margin-top: 6rem;
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: opacity 1s ease, transform 1s ease;
+        }
+
+        .section.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .section-title {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .experience-item {
+            margin-bottom: 2rem;
+            background: rgba(209, 58, 31, 0.1);
+            padding: 1.5rem;
+            border-radius: 8px;
+        }
+
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 40px;
+            margin: 2rem auto;
+            justify-items: center;
+            max-width: 900px;
+            padding: 20px;
+        }
+
+        .skill {
+            position: relative;
+            width: 160px;
+            height: 160px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .skill-chart {
+            position: relative;
+            width: 120px;
+            height: 120px;
+        }
+
+        .skill svg {
+            transform: rotate(-90deg);
+            width: 100%;
+            height: 100%;
+        }
+
+        .skill circle {
+            fill: none;
+            stroke-width: 10;
+            stroke-linecap: round;
+        }
+
+        .skill .background {
+            stroke: rgba(255, 255, 255, 0.1);
+        }
+
+        .skill .progress {
+            stroke-dasharray: 314;
+            stroke-dashoffset: 314;
+            transition: stroke-dashoffset 1.5s ease-out;
+        }
+
+        .skill .percentage {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--text-light);
+            text-align: center;
+            width: 100%;
+        }
+
+        .skill-title {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            width: 100%;
+            line-height: 1.3;
+        }
+
+        .premiere .progress { stroke: var(--premiere-color); }
+        .illustrator .progress { stroke: var(--illustrator-color); }
+        .aftereffects .progress { stroke: var(--aftereffects-color); }
+        .photoshop .progress { stroke: var(--photoshop-color); }
+        .uiux .progress { stroke: var(--uiux-color); }
+        .html .progress { stroke: var(--html-color); }
+        .css .progress { stroke: var(--css-color); }
+        .javascript .progress { stroke: var(--js-color); }
+
+        .progress-bars {
+            display: grid;
+            gap: 1.5rem;
+            margin-top: 4rem;
+        }
+
+        .progress-bar {
+            margin-bottom: 1.5rem;
+        }
+
+        .progress-info {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+        }
+
+        .progress-name {
+            font-weight: 500;
+        }
+
+        .progress-percent {
+            color: var(--primary-color);
+        }
+
+        .progress-track {
+            height: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: var(--primary-color);
+            border-radius: 5px;
+            transition: width 1s ease-in-out;
+        }
+
+        .about-content {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            max-width: 600px;
+            color: rgba(255,255,255,0.9);
+        }
+
+        .downloads-section {
+            margin-top: 6rem;
+            text-align: center;
+        }
+
+        .download-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 24px;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        .download-btn:hover {
+            transform: translateY(-3px);
+            background-color: #e04b2e;
+        }
+
+        .language-title {
+            width: 100%;
+            margin-top: 2rem;
+            color: var(--primary-color);
+            letter-spacing: 1px;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+        }
+
+        .gallery {
+            margin-top: 4rem;
+        }
+
+        .gallery-title {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 2rem;
+        }
+
+        .gallery-item {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.03);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Estilos para o vídeo no modal */
+        .modal-video-container {
+            width: 100%;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            overflow: hidden;
+            background: #000;
+        }
+
+        .modal-video {
+            width: 100%;
+            display: block;
+            outline: none;
+        }
+
+        .project-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.9);
+            z-index: 2000;
+            overflow-y: auto;
+            padding: 2rem;
+        }
+
+        .modal-content {
+            background-color: rgba(30,30,30,0.95);
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 2rem;
+            border-radius: 8px;
+            position: relative;
+            animation: slideUp 0.5s ease-out forwards;
+        }
+
+        @keyframes slideUp {
+            0% {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeOutDown {
+            0% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .modal-actions {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .modal-translate-btn {
+            background: none;
+            border: 1px solid var(--text-light);
+            padding: 6px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.8rem;
+            color: var(--text-light);
+            transition: 0.3s;
+        }
+
+        .modal-translate-btn:hover {
+            background: rgba(255,255,255,0.1);
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .project-images {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 2rem 0;
+        }
+
+        .project-images img {
+            width: 100%;
+            border-radius: 4px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .project-images img:hover {
+            transform: scale(1.02);
+        }
+
+        .project-description {
+            margin-top: 2rem;
+            line-height: 1.7;
+            padding: 1rem;
+            background: rgba(255,255,255,0.05);
+            border-radius: 8px;
+        }
+
+        .competencies-section {
+            margin-top: 6rem;
+        }
+
+        .competencies-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .competency-card {
+            background: rgba(209, 58, 31, 0.1);
+            padding: 2rem;
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .competency-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .competency-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .competency-title {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--text-light);
+        }
+
+        .competency-description {
+            color: rgba(255,255,255,0.8);
+            line-height: 1.6;
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 15px 0;
+            text-align: center;
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.7);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer p {
+            margin: 0;
+            letter-spacing: 1px;
+        }
+
+        @media (max-width: 1024px) {
+            .main-content {
+                padding: 0 10% 4rem;
+            }
+            
+            .video-container iframe {
+                height: 500px;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .main-content {
+                padding: 0 8% 4rem;
+                margin-top: 8rem;
+            }
+            
+            .name-line { 
+                font-size: 3.5rem;
+                letter-spacing: 10px;
+            }
+            
+            .title { 
+                font-size: 1.3rem;
+                margin: 2.5rem 0 8rem 0;
+            }
+            
+            .video-container {
+                margin-bottom: 5rem;
+            }
+            
+            .video-container video {
+                height: 400px;
+            }
+            
+            .side-menu { 
+                width: 60%;
+                left: -60%;
+            }
+            
+            .section-title {
+                font-size: 1.5rem;
+            }
+            
+            .skills-container {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+            }
+            
+            .skill {
+                width: 140px;
+                height: 140px;
+            }
+            
+            .skill-chart {
+                width: 100px;
+                height: 100px;
+            }
+            
+            .skill .percentage {
+                font-size: 1.5rem;
+            }
+
+            .download-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .competencies-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+
+            .footer {
+                padding: 10px 0;
+                font-size: 0.7rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .main-content {
+                padding: 0 5% 4rem;
+            }
+            
+            .name-line { 
+                font-size: 2.8rem;
+                letter-spacing: 6px;
+                margin-bottom: 1.5rem;
+            }
+            
+            .title {
+                font-size: 1.1rem;
+                margin: 2rem 0 4rem 0;
+            }
+            
+            .section {
+                margin-top: 4rem;
+            }
+            
+            .section-title {
+                font-size: 1.6rem;
+            }
+            
+            .video-container video {
+                height: 250px;
+            }
+            
+            .skills-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .skill {
+                width: 130px;
+                height: 130px;
+            }
+            
+            .skill-title {
+                font-size: 0.8rem;
+                margin-top: 20px;
+            }
+
+            .progress-bars {
+                margin-top: 3rem;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .competencies-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+ /* Novo estilo para a seção "Mais Projetos" */
+        .more-projects {
+            text-align: center;
+            margin-top: 3rem;
+            padding: 2rem;
+            background: rgba(209, 58, 31, 0.1);
+            border-radius: 8px;
+        }
+
+        .more-projects p {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .portfolio-link {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .portfolio-link:hover {
+            background-color: #e04b2e;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
 
 
 
 
-        
-
-
-
-
-        
     </style>
-
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="script.js"></script> <!-- Seu arquivo deve vir depois -->
-
-    </script>
 </head>
 <body>
-    <button id="translateBtn">EN</button>
+    <nav class="navbar">
+        <button class="menu-btn" aria-label="Abrir menu">
+            <span class="menu-icon"></span>
+            <span class="menu-icon"></span>
+            <span class="menu-icon"></span>
+        </button>
+        <button class="translate-btn">EN/PT</button>
+    </nav>
 
-    <div class="container">
-        <header class="fade-in">
-            <h1>Diogo Duarte</h1>
-            <h2 data-translate="Titulo Profissao">Graphic Designer & Web Developer</h2>
-            <p>📍 <span data-translate="Localizacao">Portugal</span> | ✉️ diogo.silvanoduarte@gmail.com | 📞 933 402 201</p>
-        </header><header class="top-section">
-    <div class="fade-in" class="profile-image" >
-        <img src="foto.png" alt="Foto de Perfil">
-    </div>
-</header>
-
-        <section id="sobre" class="fade-in">
-            <h2 data-translate="Sobre Mim">Sobre Mim</h2>
-            <p data-translate="Descricao Sobre Mim 1">Sou um Designer Gráfico e Multimédia apaixonado, com experiência em Adobe Illustrator, Photoshop, After Effects e Premiere. Tenho experiência em motion graphics, branding e criação de conteúdo digital para mídias impressas e digitais.</p>
-            <p data-translate="Descricao Sobre Mim 2">Além do design, também tenho experiência em Front-end e Back-end, com conhecimento sólido em HTML, CSS, e desenvolvimento web. Gosto de combinar design e tecnologia para criar interfaces intuitivas e funcionais.</p>
-        </section>
-
-        <section id="experiencia" class="fade-in">
-            <h2 data-translate="Experiencia Profissional">Experiência Profissional</h2>
-            <div class="job">
-                <h3 data-translate="Cargo Restart">Graphic Designer - Restart</h3>
-                <p><strong data-translate="Data Restart">Março 2022 - Agosto 2022</strong></p>
-                <p data-translate="Descricao Restart">Responsável pelo design de layouts para materiais digitais e impressos, como logos e embalagens. Criação de composições visuais equilibradas e colaboração com equipas de diferentes departamentos.</p>
-            </div>
-            <div class="job">
-                <h3 data-translate="Cargo Knowledge">IT Technician - Knowledge Academy</h3>
-                <p><strong data-translate="Data Knowledge">Março 2019 - Agosto 2019</strong></p>
-                <p data-translate="Descricao Knowledge">Suporte e gestão de produtos de TI, assistência na organização de documentos, treinamento de funcionários em aplicações Microsoft e atendimento ao cliente.</p>
-            </div>
-        </section>
-
-
-
-
-
-
-
-      <!-- Adicione esta seção após a experiência profissional -->
-<section class="skills-section fade-in">
-    <h2 data-translate="Habilidades">HABILIDADES</h2>
-    
-    <div class="skills-grid" class="fade-in">
-        <!-- Coluna 1 -->
-        <div class="skill-column">
-            <!-- Adobe Premiere Pro -->
-            <div class="skill-item premiere reveal">
-                <div class="progress-circle" style="--percent: 90">
-                    <div class="progress-inner">
-                        <span class="percentage">10/10</span>
-                    </div>
-                </div>
-                <p class="skill-label">Adobe Premiere</p>
-            </div>
-
-            <!-- After Effects -->
-            <div class="skill-item after-effects reveal">
-                <div class="progress-circle" style="--percent: 90">
-                    <div class="progress-inner">
-                        <span class="percentage">9/10</span>
-                    </div>
-                </div>
-                <p class="skill-label">After Effects</p>
-            </div>
-
-            <!-- Photoshop -->
-            <div class="skill-item photoshop reveal">
-                <div class="progress-circle" style="--percent: 90">
-                    <div class="progress-inner">
-                        <span class="percentage">9/10</span>
-                    </div>
-                </div>
-                <p class="skill-label">Photoshop</p>
-            </div>
-
-            <!-- Illustrator -->
-            <div class="skill-item illustrator reveal">
-                <div class="progress-circle" style="--percent: 90">
-                    <div class="progress-inner">
-                        <span class="percentage">8/10</span>
-                    </div>
-                </div>
-                <p class="skill-label">Adobe Illustrator</p>
-            </div>
+    <div class="side-menu">
+        <button class="menu-btn close-btn">
+            <span class="menu-icon"></span>
+            <span class="menu-icon"></span>
+            <span class="menu-icon"></span>
+        </button>
+        <div class="menu-links">
+            <a href="#downloads" class="menu-link" data-translate="downloads">Downloads</a>
+            <a href="#contactos" class="menu-link" data-translate="contactos">Contactos</a>
+            <a href="#video" class="menu-link" data-translate="video">Video</a>
+            <a href="#sobre-mim" class="menu-link" data-translate="sobreMim">Sobre Mim</a>
+            <a href="#percurso" class="menu-link" data-translate="percurso">Percurso Profissional</a>
+            <a href="#galeria" class="menu-link" data-translate="galeria">Galeria</a>
+            <a href="#habilidades" class="menu-link" data-translate="habilidades">Habilidades</a>
+            <a href="#competencias" class="menu-link" data-translate="competencias">Competências</a>
         </div>
+    </div>
 
-        <!-- Coluna 2 -->
-        <div class="skill-column">
-            <!-- Adobe XD -->
-            <div class="skill-item xd reveal">
-                <div class="progress-circle" style="--percent: 90">
-                    <div class="progress-inner">
-                        <span class="percentage">9/10</span>
-                    </div>
-                </div>
-                <p class="skill-label">Adobe XD</p>
+    <div class="main-content">
+        <div class="name-line">DIOGO</div>
+        <div class="name-line">DUARTE</div>
+        <div class="title" data-translate="titulo">GRAPHIC DESIGNER</div>
+
+        <section id="downloads" class="section downloads-section">
+            <h2 class="section-title" data-translate="downloads">DOWNLOADS</h2>
+            <div class="download-links">
+                <a href="https://drive.google.com/uc?export=download&id=1-Qxj8nScjs9hfzQpkMtO2ZIM0ep5720j" class="download-btn" target="_blank">
+                    <i class="fas fa-file-pdf"></i>
+                    <span data-translate="downloadCV">Download CV</span>
+                </a>
+                <a href="https://drive.google.com/uc?export=download&id=1ONiWYP3zuz4WTdBUzhc38hcJ2kWQsCis" class="download-btn" target="_blank">
+                    <i class="fas fa-images"></i>
+                    <span data-translate="downloadPortfolio">Download Portfólio</span>
+                </a>
+            </div>
+        </section>
+
+        <section id="contactos" class="section">
+            <h2 class="section-title" data-translate="contactos">CONTACTOS</h2>
+            <div class="experience-item">
+                <p><i class="fas fa-phone"></i> <span data-translate="telefone">+351 933 402 201</span></p>
+                <p><i class="fas fa-envelope"></i> <span data-translate="email">diogo.silvanoduarte@gmail.com</span></p>
+            </div>
+        </section>
+
+        <div id="video" class="video-container"> 
+    <video width="100%" controls autoplay loop muted playsinline>
+        <source src="vid/comp 1.mp4" type="video/mp4">
+        Seu navegador não suporta o elemento de vídeo.
+    </video>
+</div>
+
+        <section id="sobre-mim" class="section">
+            <h2 class="section-title" data-translate="sobreMim">SOBRE MIM</h2>
+            <div class="about-content">
+                <p data-translate="sobreTexto1">Sou o Diogo, licenciado em Engenharia Multimédia, apaixonado por oferecer experiências visuais ao nível de branding, edição de video e publicidade. Apesar de estar no início da minha carreira, tenho um forte sentido de criatividade sempre com entusiasmo e vontade de aprender.</p>
+                <p data-translate="sobreTexto2">Durante a minha formação, adquiri proficiência em ferramentas como Photoshop, Illustrator, InDesign e outras da Adobe, permitindo-me criar designs impactantes e estratégicos.</p>
+            </div>
+        </section>
+
+        <section id="percurso" class="section">
+            <h2 class="section-title" data-translate="percurso">PERCURSO PROFISSIONAL</h2>
+            <div class="experience-item">
+                <h3 data-translate="exp1Titulo">Graphic Designer - Restart</h3>
+                <ul>
+                    <li data-translate="exp1Item1">Criação de layouts e materiais digitais</li>
+                    <li data-translate="exp1Item2">Desenvolvimento de identidades visuais</li>
+                    <li data-translate="exp1Item3">Integração em equipa responsável por criação de conteúdo digital para marketing da empresa</li>
+                </ul>
             </div>
 
-            <!-- Lightroom -->
-            <div class="skill-item lightroom reveal">
-                <div class="progress-circle" style="--percent: 90">
-                    <div class="progress-inner">
-                        <span class="percentage">9/10</span>
-                    </div>
-                </div>
-                <p class="skill-label">Lightroom</p>
+            <div class="experience-item">
+                <h3 data-translate="exp2Titulo">Técnico de Informática - Knowledge Academy</h3>
+                <ul>
+                    <li data-translate="exp2Item1">Suporte e gestão de produtos TI</li>
+                    <li data-translate="exp2Item2">Formação em aplicações Microsoft</li>
+                    <li data-translate="exp2Item3">Atendimento ao cliente</li>
+                </ul>
             </div>
 
-            <!-- UX/UI -->
-            <div class="skill-item uxui reveal">
-                <div class="progress-circle" style="--percent: 90">
-                    <div class="progress-inner">
-                        <span class="percentage">9/10</span>
-                    </div>
-                </div>
-                <p class="skill-label">UX/UI</p>
+            <h2 class="section-title" data-translate="formacao">FORMAÇÃO ACADÊMICA</h2>
+            <div class="experience-item">
+                <h3 data-translate="formacaoTitulo">ISTEC - Engenharia Multimédia</h3>
+                <ul>
+                    <li data-translate="formacaoItem1">Edição de vídeo avançada</li>
+                    <li data-translate="formacaoItem2">Criação de componentes UI/UX</li>
+                    <li data-translate="formacaoItem3">Modelação 3D</li>
+                </ul>
             </div>
+        </section>
 
-            <!-- Figma -->            
-            <div class="skill-item figma reveal">
-                <div class="progress-circle" style="--percent: 90">
-                    <div class="progress-inner">
-                        <span class="percentage">8/10</span>
-                    </div>
-                </div>
-                <p class="skill-label">Figma</p>
+        <section id="galeria" class="section gallery">
+            <h2 class="gallery-title" data-translate="galeria">GALERIA</h2>
+            <div class="gallery-grid" id="gallery-container">
+                <!-- Projetos serão carregados dinamicamente via JavaScript -->
             </div>
+        </section>
 
+
+
+<div class="more-projects">
+            <p data-translate="maisProjetosTexto">Para mais projetos clique aqui</p>
+            <a href="https://drive.google.com/uc?export=download&id=1ONiWYP3zuz4WTdBUzhc38hcJ2kWQsCis" 
+               class="portfolio-link" 
+               target="_blank"
+               data-translate="verPortfolio">
+                Ver Portfólio Completo
+            </a>
+        </div>
+    </section>
+
+
+
+        <section id="habilidades" class="section">
+            <h2 class="section-title" data-translate="habilidadesTecnicas">HABILIDADES TÉCNICAS</h2>
             
+            <div class="skills-container">
+                <div class="skill premiere" data-percentage="90">
+                    <div class="skill-chart">
+                        <svg viewBox="0 0 100 100">
+                            <circle class="background" cx="50" cy="50" r="45" />
+                            <circle class="progress" cx="50" cy="50" r="45" />
+                        </svg>
+                        <div class="percentage">90%</div>
+                    </div>
+                    <div class="skill-title">PREMIERE PRO</div>
+                </div>
+                
+                <div class="skill uiux" data-percentage="75">
+                    <div class="skill-chart">
+                        <svg viewBox="0 0 100 100">
+                            <circle class="background" cx="50" cy="50" r="45" />
+                            <circle class="progress" cx="50" cy="50" r="45" />
+                        </svg>
+                        <div class="percentage">75%</div>
+                    </div>
+                    <div class="skill-title">UI/UX DESIGN</div>
+                </div>
+                
+                <div class="skill illustrator" data-percentage="90">
+                    <div class="skill-chart">
+                        <svg viewBox="0 0 100 100">
+                            <circle class="background" cx="50" cy="50" r="45" />
+                            <circle class="progress" cx="50" cy="50" r="45" />
+                        </svg>
+                        <div class="percentage">90%</div>
+                    </div>
+                    <div class="skill-title">ILLUSTRATOR</div>
+                </div>
+                
+                <div class="skill html" data-percentage="90">
+                    <div class="skill-chart">
+                        <svg viewBox="0 0 100 100">
+                            <circle class="background" cx="50" cy="50" r="45" />
+                            <circle class="progress" cx="50" cy="50" r="45" />
+                        </svg>
+                        <div class="percentage">90%</div>
+                    </div>
+                    <div class="skill-title">HTML</div>
+                </div>
+                
+                <div class="skill aftereffects" data-percentage="90">
+                    <div class="skill-chart">
+                        <svg viewBox="0 0 100 100">
+                            <circle class="background" cx="50" cy="50" r="45" />
+                            <circle class="progress" cx="50" cy="50" r="45" />
+                        </svg>
+                        <div class="percentage">90%</div>
+                    </div>
+                    <div class="skill-title">AFTER EFFECTS</div>
+                </div>
+                
+                <div class="skill css" data-percentage="70">
+                    <div class="skill-chart">
+                        <svg viewBox="0 0 100 100">
+                            <circle class="background" cx="50" cy="50" r="45" />
+                            <circle class="progress" cx="50" cy="50" r="45" />
+                        </svg>
+                        <div class="percentage">70%</div>
+                    </div>
+                    <div class="skill-title">CSS</div>
+                </div>
+                
+                <div class="skill photoshop" data-percentage="85">
+                    <div class="skill-chart">
+                        <svg viewBox="0 0 100 100">
+                            <circle class="background" cx="50" cy="50" r="45" />
+                            <circle class="progress" cx="50" cy="50" r="45" />
+                        </svg>
+                        <div class="percentage">85%</div>
+                    </div>
+                    <div class="skill-title">PHOTOSHOP</div>
+                </div>
+                
+                <div class="skill javascript" data-percentage="60">
+                    <div class="skill-chart">
+                        <svg viewBox="0 0 100 100">
+                            <circle class="background" cx="50" cy="50" r="45" />
+                            <circle class="progress" cx="50" cy="50" r="45" />
+                        </svg>
+                        <div class="percentage">60%</div>
+                    </div>
+                    <div class="skill-title">JAVASCRIPT</div>
+                </div>
+            </div>
+
+
+             
+
+
+            <h2 class="section-title" style="margin-top: 4rem;" data-translate="competencias">COMPETÊNCIAS</h2>
+            <div class="progress-bars">
+                <div class="progress-bar">
+                    <div class="progress-info">
+                        <span class="progress-name" data-translate="trabalhoEquipa">Trabalho em Equipa</span>
+                        <span class="progress-percent" data-translate="trabalhoEquipaPercent">90%</span>
+                    </div>
+                    <div class="progress-track">
+                        <div class="progress-fill" style="width: 90%"></div>
+                    </div>
+                </div>
+                
+                <div class="progress-bar">
+                    <div class="progress-info">
+                        <span class="progress-name" data-translate="comunicacao">Comunicação</span>
+                        <span class="progress-percent" data-translate="comunicacaoPercent">85%</span>
+                    </div>
+                    <div class="progress-track">
+                        <div class="progress-fill" style="width: 85%"></div>
+                    </div>
+                </div>
+                
+                <div class="progress-bar">
+                    <div class="progress-info">
+                        <span class="progress-name" data-translate="aprendizado">Aprendizagem Contínua</span>
+                        <span class="progress-percent" data-translate="aprendizadoPercent">95%</span>
+                    </div>
+                    <div class="progress-track">
+                        <div class="progress-fill" style="width: 95%"></div>
+                    </div>
+                </div>
+
+                <h3 class="language-title" data-translate="idiomas">IDIOMAS</h3>
+                
+                <div class="progress-bar">
+                    <div class="progress-info">
+                        <span class="progress-name" data-translate="ingles">Inglês</span>
+                        <span class="progress-percent" data-translate="inglesNivel">Avançado</span>
+                    </div>
+                    <div class="progress-track">
+                        <div class="progress-fill" style="width: 80%"></div>
+                    </div>
+                </div>
+                
+                <div class="progress-bar">
+                    <div class="progress-info">
+                        <span class="progress-name" data-translate="portugues">Português</span>
+                        <span class="progress-percent" data-translate="portuguesNivel">Nativo</span>
+                    </div>
+                    <div class="progress-track">
+                        <div class="progress-fill" style="width: 100%"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="competencias" class="section competencies-section">
+            <h2 class="section-title" data-translate="competenciasPrincipais">COMPETÊNCIAS PRINCIPAIS</h2>
+            <div class="competencies-grid">
+                <div class="competency-card">
+                    <div class="competency-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3 class="competency-title" data-translate="criatividade">Criatividade</h3>
+                    <p class="competency-description" data-translate="criatividadeDesc">Capacidade de pensar fora da caixa e desenvolver soluções visuais inovadoras e impactantes para projetos de design.</p>
+                </div>
+                
+                <div class="competency-card">
+                    <div class="competency-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="competency-title" data-translate="colaboracao">Colaboração</h3>
+                    <p class="competency-description" data-translate="colaboracaoDesc">Habilidade para trabalhar eficazmente em equipe, integrando diferentes perspectivas e contribuindo para objetivos comuns.</p>
+                </div>
+                
+                <div class="competency-card">
+                    <div class="competency-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3 class="competency-title" data-translate="gestaoTempo">Gestão de Tempo</h3>
+                    <p class="competency-description" data-translate="gestaoTempoDesc">Capacidade de organizar e priorizar tarefas para cumprir prazos sem comprometer a qualidade do trabalho.</p>
+                </div>
+                
+                <div class="competency-card">
+                    <div class="competency-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3 class="competency-title" data-translate="comunicacao">Comunicação</h3>
+                    <p class="competency-description" data-translate="comunicacaoDesc">Habilidade para articular ideias de forma clara e eficaz, tanto verbalmente quanto por meio de representações visuais.</p>
+                </div>
+                
+                <div class="competency-card">
+                    <div class="competency-icon">
+                        <i class="fas fa-puzzle-piece"></i>
+                    </div>
+                    <h3 class="competency-title" data-translate="resolucaoProblemas">Resolução de Problemas</h3>
+                    <p class="competency-description" data-translate="resolucaoProblemasDesc">Capacidade de analisar desafios de design e desenvolver soluções criativas e funcionais.</p>
+                </div>
+                
+                <div class="competency-card">
+                    <div class="competency-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3 class="competency-title" data-translate="aprendizadoContinuo">Aprendizagem Contínua</h3>
+                    <p class="competency-description" data-translate="aprendizadoContinuoDesc">Dedicação constante ao melhoramento profissional, acompanhando tendências e novas tecnologias de design.</p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Modal para detalhes do projeto -->
+    <div id="project-modal" class="project-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modal-project-title"></h2>
+                <div class="modal-actions">
+                    <button class="modal-translate-btn translate-btn">EN/PT</button>
+                    <span class="close-modal">&times;</span>
+                </div>
+            </div>
+            <div class="project-images" id="modal-project-images"></div>
+            <div class="project-description" id="modal-project-description"></div>
         </div>
     </div>
-</section>
 
-
-
-
-       <!-- Seção do Banner Promocional -->
-    <section class="media-section fade-in">
-        <div class="media-content">
-            <div class="media-text">
-                <h2 data-translate="Banner Titulo">BANNER PROMOCIONAL</h2>
-                <p>
-                    <strong data-translate="Banner Destaque">SUMO NATURAL</strong><br><br>
-                    <span data-translate="Banner Texto 1">Projeto desenvolvido na minha licenciatura em Engenharia Multimédia para criar um banner promocional de sumo natural.</span><br><br>
-                    <span data-translate="Banner Texto 2">Utilizando Adobe Illustrator e Photoshop, combinei fotografia, tipografia e elementos gráficos para criar um design dinâmico e envolvente.</span>
-                </p>
-            </div>
-            <img src="Design sem nome.png" alt="Design Work Sample" class="project-image">
-        </div>
-    </section>
-
-
-
-
-
-
-
-        <!-- Seção do Hot Dog -->
-    <section class="media-section fade-in">
-        <div class="media-content">
-            <img src="hotdog-project.png.jpg" alt="Design Work Sample" class="project-image">
-            <div class="media-text">
-                <h2 data-translate="Hotdog Titulo">HOT DOG CARTOON</h2>
-                <p>
-                    <strong data-translate="Hotdog Destaque">1920s STYLE</strong><br><br>
-                    <span data-translate="Hotdog Descricao">Criei um personagem de cachorro-quente animado inspirado no estilo rubber hose dos anos 1920, utilizando Adobe Illustrator.</span>
-                </p>
-            </div>
-        </div>
-    </section>
-
-
-
-
-        <section class="media-section fade-in">
-            <h2 data-translate="Video Demo">COUTDOWN MOTIVACIONAL</h2>
-         <p data-translate="Video Description">
-             <strong>VIDEO EDITADO</strong><br><br>
-             Editei um vídeo motivacional com contagem regressiva, combinando visuais dinâmicos, música inspiradora e transições suaves. Usei Adobe Premiere Pro e After Effects para criar um ritmo envolvente e empolgante.<br><br>
-            </p>
-        </section>
-
-
-
-
-
-
-        <section class="video fade-in">
-            <h2 data-translate="Exemplo Trabalho">Exemplo de Trabalho</h2>
-            <iframe src="https://drive.google.com/file/d/1ylMKtPwvgrdQcVICalhKIExDm8XX2nRk/preview" 
-                    width="100%" 
-                    height="400" 
-                    allow="autoplay"></iframe>
-        </section>
-
-        <section id="portfolio" class="fade-in">
-            <h2 data-translate="Portfolio">Portfólio</h2>
-            <p><a href="https://drive.google.com/file/d/1ONiWYP3zuz4WTdBUzhc38hcJ2kWQsCis/view" target="_blank" class="btn" data-translate="Ver Portfolio">🎨 Ver Portfólio</a></p>
-        </section>
-
-        <section id="curriculo" class="fade-in">
-            <h2 data-translate="Curriculo">Currículo</h2>
-            <a href="https://drive.google.com/uc?export=download&id=1-Qxj8nScjs9hfzQpkMtO2ZIM0ep5720j" class="btn" data-translate="Baixar Curriculo">📄 Baixar Currículo</a>
-        </section>
-    </div>
+    <footer class="footer">
+        <p>&copy; <span id="year"></span> Diogo Duarte. <span data-translate="direitosReservados">Todos os direitos reservados.</span></p>
+    </footer>
 
     <script>
-
-
+        // Menu Hamburguer Functionality
+        const menuBtn = document.querySelector('.navbar .menu-btn');
+        const closeBtn = document.querySelector('.close-btn');
+        const sideMenu = document.querySelector('.side-menu');
         
-        // Traduções
+        menuBtn.addEventListener('click', () => {
+            menuBtn.classList.toggle('active');
+            sideMenu.classList.toggle('active');
+        });
+
+        closeBtn.addEventListener('click', () => {
+            menuBtn.classList.remove('active');
+            sideMenu.classList.remove('active');
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!sideMenu.contains(e.target) && e.target !== menuBtn && !menuBtn.contains(e.target)) {
+                menuBtn.classList.remove('active');
+                sideMenu.classList.remove('active');
+            }
+        });
+
+        // CORREÇÃO DA NAVEGAÇÃO DA GALERIA
+        document.querySelectorAll('.menu-link').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = link.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                
+                if (targetSection) {
+                    setTimeout(() => {
+                        window.scrollTo({
+                            top: targetSection.offsetTop - 100,
+                            behavior: 'smooth'
+                        });
+                    }, 300);
+                    
+                    menuBtn.classList.remove('active');
+                    sideMenu.classList.remove('active');
+                }
+            });
+        });
+
+        // Translation System
         const translations = {
-            "pt-BR": {
-                // Traduções existentes
-                "Titulo Profissao": "Graphic Designer & Web Developer",
-                "Localizacao": "Portugal",
-                "Sobre Mim": "Sobre Mim",
-                "Descricao Sobre Mim 1": "Sou um Designer Gráfico e Multimédia apaixonado, com experiência em Adobe Illustrator, Photoshop, After Effects e Premiere. Tenho experiência em motion graphics, branding e criação de conteúdo digital para mídias impressas e digitais.",
-                "Descricao Sobre Mim 2": "Além do design, também tenho experiência em Front-end e Back-end, com conhecimento sólido em HTML, CSS, e desenvolvimento web. Gosto de combinar design e tecnologia para criar interfaces intuitivas e funcionais.",
-                "Experiencia Profissional": "Experiência Profissional",
-                "Cargo Restart": "Graphic Designer - Restart",
-                "Data Restart": "Março 2022 - Agosto 2022",
-                "Descricao Restart": "Responsável pelo design de layouts para materiais digitais e impressos, como logos e embalagens. Criação de composições visuais equilibradas e colaboração com equipas de diferentes departamentos.",
-                "Cargo Knowledge": "IT Technician - Knowledge Academy",
-                "Data Knowledge": "Março 2019 - Agosto 2019",
-                "Descricao Knowledge": "Suporte e gestão de produtos de TI, assistência na organização de documentos, treinamento de funcionários em aplicações Microsoft e atendimento ao cliente.",
-                "Portfolio": "Portfólio",
-                "Ver Portfolio": "🎨 Ver Portfólio",
-                "Curriculo": "Currículo",
-                "Baixar Curriculo": "📄 Baixar Currículo",
-                "Exemplo Trabalho": "Exemplo de Trabalho",
-                
-                // Novas traduções
-                "Banner Titulo": "BANNER PROMOCIONAL",
-                "Banner Destaque": "SUMO NATURAL",
-                "Banner Texto 1": "Projeto desenvolvido na minha licenciatura em Engenharia Multimédia para criar um banner promocional de sumo natural.",
-                "Banner Texto 2": "Utilizando Adobe Illustrator e Photoshop, combinei fotografia, tipografia e elementos gráficos para criar um design dinâmico e envolvente.",
-                "Hotdog Titulo": "HOT DOG CARTOON",
-                "Hotdog Destaque": "1920s STYLE",
-                "Hotdog Descricao": "Criei um personagem de cachorro-quente animado inspirado no estilo rubber hose dos anos 1920, utilizando Adobe Illustrator.vetorização e refinamento de detalhes para alcançar uma estética vintage. Este projeto desafiou-me a equilibrar nostalgia com originalidade, resultando em um personagem divertido e dinâmico cheio de personalidade.",
-                "Video Titulo": "COUTDOWN MOTIVACIONAL",
-                "Video Destaque": "VIDEO EDITADO",
-                "Video Descricao": "Editei um vídeo motivacional com contagem regressiva, combinando visuais dinâmicos, música inspiradora e transições suaves."
+            pt: {
+                sobreMim: "Sobre Mim",
+                percurso: "Percurso Profissional",
+                habilidades: "Habilidades",
+                galeria: "Galeria",
+                contactos: "Contactos",
+                downloads: "Downloads",
+                video: "Vídeo",
+                titulo: "GRAPHIC DESIGNER",
+                sobreTexto1: "Sou o Diogo, licenciado em Engenharia Multimédia, apaixonado por oferecer experiências visuais ao nível de branding, edição de video e publicidade. Apesar de estar no início da minha carreira, tenho um forte sentido de criatividade sempre com entusiasmo e vontade de aprender.",
+                sobreTexto2: "Durante a minha formação, adquiri proficiência em ferramentas como Photoshop, Illustrator, InDesign e outras da Adobe, permitindo-me criar designs impactantes e estratégicos.",
+                interesses: "Principais Interesses:",
+                interesse1: "Design de Identidade Visual",
+                interesse2: "UI/UX Design",
+                interesse3: "Edição de Vídeo Profissional",
+                interesse4: "Desenvolvimento de Marca",
+                exp1Titulo: "Graphic Designer - Restart",
+                exp1Item1: "Criação de layouts e materiais digitais",
+                exp1Item2: "Desenvolvimento de identidades visuais",
+                exp1Item3: "Integração em equipa responsável por criação de conteúdo digital para marketing da empresa",
+                exp2Titulo: "Técnico de Informática - Knowledge Academy",
+                exp2Item1: "Suporte e gestão de produtos TI",
+                exp2Item2: "Formação em aplicações Microsoft",
+                exp2Item3: "Atendimento ao cliente",
+                formacao: "FORMAÇÃO ACADÊMICA",
+                formacaoTitulo: "ISTEC - Engenharia Multimédia",
+                formacaoItem1: "Edição de vídeo avançada",
+                formacaoItem2: "Criação de componentes UI/UX",
+                formacaoItem3: "Modelação 3D",
+                habilidadesTecnicas: "HABILIDADES TÉCNICAS",
+                premiere: "PREMIERE PRO",
+                premierePercent: "90%",
+                illustrator: "ILLUSTRATOR",
+                illustratorPercent: "90%",
+                afterEffects: "AFTER EFFECTS",
+                afterEffectsPercent: "90%",
+                photoshop: "PHOTOSHOP",
+                photoshopPercent: "85%",
+                uiux: "UI/UX DESIGN",
+                uiuxPercent: "75%",
+                competencias: "Competências",
+                competenciasPrincipais: "COMPETÊNCIAS PRINCIPAIS",
+                trabalhoEquipa: "Trabalho em Equipa",
+                trabalhoEquipaPercent: "90%",
+                comunicacao: "Comunicação",
+                comunicacaoPercent: "85%",
+                aprendizado: "Aprendizagem Contínua",
+                aprendizadoPercent: "95%",
+                criatividade: "Criatividade",
+                criatividadeDesc: "Capacidade de pensar fora da caixa e desenvolver soluções visuais inovadoras e impactantes para projetos de design.",
+                colaboracao: "Colaboração",
+                colaboracaoDesc: "Habilidade para trabalhar eficazmente em equipe, integrando diferentes perspectivas e contribuindo para objetivos comuns.",
+                gestaoTempo: "Gestão de Tempo",
+                gestaoTempoDesc: "Capacidade de organizar e priorizar tarefas para cumprir prazos sem comprometer a qualidade do trabalho.",
+                resolucaoProblemas: "Resolução de Problemas",
+                resolucaoProblemasDesc: "Capacidade de analisar desafios de design e desenvolver soluções criativas e funcionais.",
+                aprendizadoContinuo: "Aprendizado Contínuo",
+                aprendizadoContinuoDesc: "Dedicação constante ao aprimoramento profissional, acompanhando tendências e novas tecnologias de design.",
+                idiomas: "IDIOMAS",
+                ingles: "Inglês",
+                inglesNivel: "Avançado",
+                portugues: "Português",
+                portuguesNivel: "Nativo",
+                telefone: "+351 933 402 201",
+                email: "diogo.silvanoduarte@gmail.com",
+                downloadCV: "Download CV",
+                downloadPortfolio: "Download Portfólio",
+                direitosReservados: "Todos os direitos reservados.",
+                maisProjetosTexto: "Para mais projetos clique aqui",
+                verPortfolio: "Ver Portfólio Completo",
+                cliqueAqui: "clique aqui"
             },
-            "en": {
-                // Existing translations
-                "Titulo Profissao": "Graphic Designer & Web Developer",
-                "Localizacao": "Portugal",
-                "Sobre Mim": "About Me",
-                "Descricao Sobre Mim 1": "I am a passionate Graphic and Multimedia Designer with experience in Adobe Illustrator, Photoshop, After Effects, and Premiere. Skilled in motion graphics, branding, and digital content creation for both print and digital media.",
-                "Descricao Sobre Mim 2": "Beyond design, I also have experience in Front-end and Back-end development, with solid knowledge of HTML, CSS, and web development. I enjoy combining design and technology to create intuitive and functional interfaces.",
-                "Experiencia Profissional": "Professional Experience",
-                "Cargo Restart": "Graphic Designer - Restart",
-                "Data Restart": "March 2022 - August 2022",
-                "Descricao Restart": "Responsible for designing layouts for digital and print materials, including logos and packaging. Created balanced visual compositions and collaborated with cross-departmental teams.",
-                "Cargo Knowledge": "IT Technician - Knowledge Academy",
-                "Data Knowledge": "March 2019 - August 2019",
-                "Descricao Knowledge": "IT product support and management, document organization assistance, Microsoft applications training for staff, and customer service.",
-                "Portfolio": "Portfolio",
-                "Ver Portfolio": "🎨 View Portfolio",
-                "Curriculo": "Resume",
-                "Baixar Curriculo": "📄 Download Resume",
-                "Exemplo Trabalho": "Work Sample",
-                
-                // New translations
-                "Banner Titulo": "PROMOTIONAL BANNER",
-                "Banner Destaque": "NATURAL JUICE",
-                "Banner Texto 1": "Project developed during my Multimedia Engineering degree to create a promotional banner for natural juice.",
-                "Banner Texto 2": "Using Adobe Illustrator and Photoshop, I combined photography, typography and graphic elements to create a dynamic and engaging design.",
-                "Hotdog Titulo": "HOT DOG CARTOON",
-                "Hotdog Destaque": "1920s STYLE",
-                "Hotdog Descricao": "I Created an animated hot dog character inspired by 1920s rubber hose style using Adobe Illustrator.vectorizing, and refining details to achieve a vintage aesthetic. This project challenged me to balance nostalgia with originality, resulting in a fun and dynamic character full of personality.",
-                "Video Titulo": "MOTIVATIONAL COUNTDOWN",
-                "Video Destaque": "EDITED VIDEO",
-                "Video Descricao": "Edited a motivational countdown video combining dynamic visuals, inspiring music and smooth transitions."
+            en: {
+                sobreMim: "About Me",
+                percurso: "Professional Experience",
+                habilidades: "Technical skills",
+                galeria: "Gallery",
+                contactos: "Contacts",
+                downloads: "Downloads",
+                video: "Video",
+                titulo: "GRAPHIC DESIGNER",
+                sobreTexto1: "I'm Diogo, with a degree in Multimedia Engineering, passionate about delivering visual experiences in branding, video editing and advertising. Although at the beginning of my career, I have a strong creative sense always with enthusiasm and willingness to learn.",
+                sobreTexto2: "During my training, I became proficient in tools like Photoshop, Illustrator, InDesign and other Adobe tools, enabling me to create impactful and strategic designs.",
+                interesses: "Main Interests:",
+                interesse1: "Visual Identity Design",
+                interesse2: "UI/UX Design",
+                interesse3: "Professional Video Editing",
+                interesse4: "Brand Development",
+                exp1Titulo: "Graphic Designer - Restart",
+                exp1Item1: "Creation of layouts and digital materials",
+                exp1Item2: "Development of visual identities",
+                exp1Item3: "Integration in team responsible for creating digital content for company marketing",
+                exp2Titulo: "IT Technician - Knowledge Academy",
+                exp2Item1: "IT product support and management",
+                exp2Item2: "Training in Microsoft applications",
+                exp2Item3: "Customer service",
+                formacao: "EDUCATION",
+                formacaoTitulo: "ISTEC - Multimedia Engineering",
+                formacaoItem1: "Advanced video editing",
+                formacaoItem2: "UI/UX component creation",
+                formacaoItem3: "3D Modeling",
+                habilidadesTecnicas: "TECHNICAL SKILLS",
+                premiere: "PREMIERE PRO",
+                premierePercent: "90%",
+                illustrator: "ILLUSTRATOR",
+                illustratorPercent: "90%",
+                afterEffects: "AFTER EFFECTS",
+                afterEffectsPercent: "90%",
+                photoshop: "PHOTOSHOP",
+                photoshopPercent: "85%",
+                uiux: "UI/UX DESIGN",
+                uiuxPercent: "75%",
+                competencias: "Skills",
+                competenciasPrincipais: "KEY COMPETENCIES",
+                trabalhoEquipa: "Teamwork",
+                trabalhoEquipaPercent: "90%",
+                comunicacao: "Communication",
+                comunicacaoPercent: "85%",
+                aprendizado: "Continuous Learning",
+                aprendizadoPercent: "95%",
+                criatividade: "Creativity",
+                criatividadeDesc: "Ability to think outside the box and develop innovative and impactful visual solutions for design projects.",
+                colaboracao: "Collaboration",
+                colaboracaoDesc: "Ability to work effectively in a team, integrating different perspectives and contributing to common goals.",
+                gestaoTempo: "Time Management",
+                gestaoTempoDesc: "Ability to organize and prioritize tasks to meet deadlines without compromising work quality.",
+                resolucaoProblemas: "Problem Solving",
+                resolucaoProblemasDesc: "Ability to analyze design challenges and develop creative and functional solutions.",
+                aprendizadoContinuo: "Continuous Learning",
+                aprendizadoContinuoDesc: "Constant dedication to professional improvement, following trends and new design technologies.",
+                idiomas: "LANGUAGES",
+                ingles: "English",
+                inglesNivel: "Advanced",
+                portugues: "Portuguese",
+                portuguesNivel: "Native",
+                telefone: "+351 933 402 201",
+                email: "diogo.silvanoduarte@gmail.com",
+                downloadCV: "Download CV",
+                downloadPortfolio: "Download Portfolio",
+                direitosReservados: "All rights reserved.",
+                maisProjetosTexto: "For more projects click here",
+                verPortfolio: "View Full Portfolio",
+                cliqueAqui: "click here"
             }
         };
-        // ... (mantenha o resto do JavaScript) ...
 
-        function toggleLanguage() {
-            const html = document.documentElement;
-            const currentLang = html.getAttribute('lang');
-            const newLang = currentLang === 'pt-BR' ? 'en' : 'pt-BR';
-            
-            html.setAttribute('lang', newLang);
-            document.getElementById('translateBtn').textContent = newLang === 'en' ? 'PT' : 'EN';
-            
+        let currentLang = 'pt';
+        const translateBtn = document.querySelector('.translate-btn');
+
+        function applyTranslations(lang) {
             document.querySelectorAll('[data-translate]').forEach(element => {
                 const key = element.getAttribute('data-translate');
-                element.textContent = translations[newLang][key];
+                if (translations[lang][key]) {
+                    element.textContent = translations[lang][key];
+                }
             });
         }
 
-        document.getElementById('translateBtn').addEventListener('click', toggleLanguage);
+        translateBtn.addEventListener('click', () => {
+            currentLang = currentLang === 'pt' ? 'en' : 'pt';
+            translateBtn.textContent = currentLang === 'pt' ? 'EN/PT' : 'PT/EN';
+            applyTranslations(currentLang);
+        });
+
+        // Sistema de Galeria Dinâmico
+        const projects = [
+            {
+                id: 1,
+                title: "Projeto Branding",
+                titleEn: "Branding Project",
+                images: [
+                    "img/cartaovis.png",
+                    "img/Logo de Surfari em Preto e Branco.png",
+                    "img/Conceitos de Logotipo _Surfari_ em Preto e Branco.png",
+                    "img/Flyer de Aulas de Surf.png",
+                ],
+                description: "Processo completo de criação de identidade visual, incluindo desenvolvimento de logotipo, cartões de visita, papelaria e elementos de marca. Trabalhei desde o conceito inicial até à aplicação em diversos materiais, garantindo consistência visual em todos os pontos de contacto com o cliente.",
+                descriptionEn: "Complete visual identity creation process, including logo development, business cards, stationery and brand elements. I worked from the initial concept to application on various materials, ensuring visual consistency across all customer touchpoints."
+            },
+            {
+                id: 2,
+                title: "Criação de Banner Publicitário",
+                titleEn: "Advertising Banner Creation",
+                images: [
+                    "img/predio.png",
+                    "img/metro.png", 
+                    "img/nigth metro.png",
+                    "img/billboard.png",
+                ],
+                video: "vid/compet.mp4",
+                description: "Desenvolvimento de banners publicitários desde o esboço inicial até à execução final. Criei designs impactantes para diversos formatos incluindo posters, outdoors e conteúdo digital. Processo envolveu pesquisa de mercado e desenvolvimento de conceito criativo.",
+                descriptionEn: "Advertising banners development from initial sketch to final execution. I created impactful designs for various formats including posters, billboards and digital content. Process involved market research and creative concept development."
+            },
+            {
+                id: 4,
+                title: "Redesign site",
+                titleEn: "Website Redesign",
+                images: [
+                    "img/STORE 1.png",
+                    "img/STORE 2.png",
+                    "img/STORE 3.png",
+                    "img/store exp 2.png",
+                    "img/STORE 4.png",
+                    "img/store exemplo.png",
+                    "img/app.png",
+                ],
+                description: "Redesign completo de loja online, desde a estruturação com HTML, CSS e JavaScript até à implementação front-end. O processo incluiu análise de UX, criação de protótipos interativos, desenvolvimento de interface responsiva e integração com o back-end. O foco esteve na melhoria da experiência do utilizador e no aumento das conversões.",
+                descriptionEn: "Complete redesign of an online store, structured from scratch using HTML, CSS, and JavaScript through to front-end implementation. The process included UX analysis, creation of interactive prototypes, responsive interface development, and back-end integration. The focus was on improving user experience and increasing conversions."
+            },
+            {
+                id: 6,
+                title: "Hotdog Branding",
+                titleEn: "Hotdog Branding",
+                images: [
+                    "img/hotdog.png",
+                    
+                ],
+                description: "Desafio pessoal de criar uma mascote para rede de restaurantes com tema anos 1920. Desenvolvi personagem, logotipo e elementos visuais inspirados na art déco. Processo incluiu pesquisa histórica e desenvolvimento de identidade visual coesa.",
+                descriptionEn: "Personal challenge to create a mascot for a restaurant chain with 1920s theme. I developed character, logo and visual elements inspired by art deco. Process included historical research and cohesive visual identity development."
+            },
+            {
+                id: 7,
+                title: "Livros das Estações",
+                titleEn: "Seasons Books",
+                images: [
+                    "img/AUTOMN.png",
+                    "img/2232.png",
+                    "img/SPRING.png",
+                    "img/summer.png",
+                ],
+                description: "Série de 4 livros explicando cada estação do ano. Processo criativo incluiu pesquisa iconográfica, desenvolvimento de paletas de cores específicas para cada estação e criação de elementos gráficos que representam as características climáticas e culturais de cada período.",
+                descriptionEn: "Series of 4 books explaining each season. Creative process included iconographic research, development of specific color palettes for each season and creation of graphic elements representing climatic and cultural characteristics of each period."
+            }
+        ];
+
+        const galleryContainer = document.getElementById('gallery-container');
+        const modal = document.getElementById('project-modal');
+        const modalContent = document.querySelector('.modal-content');
+        const modalTitle = document.getElementById('modal-project-title');
+        const modalImages = document.getElementById('modal-project-images');
+        const modalDescription = document.getElementById('modal-project-description');
+        const closeModal = document.querySelector('.close-modal');
+
+        // Carrega os projetos na galeria
+        function loadProjects() {
+            galleryContainer.innerHTML = '';
+            projects.forEach(project => {
+                const projectElement = document.createElement('div');
+                projectElement.className = 'gallery-item';
+                projectElement.innerHTML = `
+                    <img src="${project.images[0]}" alt="${project.title}">
+                `;
+                projectElement.addEventListener('click', () => openProjectModal(project));
+                galleryContainer.appendChild(projectElement);
+            });
+        }
+
+        // Abre o modal com os detalhes do projeto
+        function openProjectModal(project) {
+            modalTitle.textContent = currentLang === 'pt' ? project.title : project.titleEn;
+            modalImages.innerHTML = '';
+            modalDescription.textContent = currentLang === 'pt' ? project.description : project.descriptionEn;
+            
+            // Adiciona o vídeo se existir
+            if (project.video) {
+                const videoContainer = document.createElement('div');
+                videoContainer.className = 'modal-video-container';
+                videoContainer.innerHTML = `
+                    <video class="modal-video" controls autoplay loop muted playsinline>
+                        <source src="${project.video}" type="video/mp4">
+                        Seu navegador não suporta o elemento de vídeo.
+                    </video>
+                `;
+                modalImages.appendChild(videoContainer);
+                
+                // Forçar autoplay programaticamente
+                setTimeout(() => {
+                    const video = videoContainer.querySelector('video');
+                    if (video) {
+                        video.play().catch(e => console.log('Autoplay prevented:', e));
+                    }
+                }, 300);
+            }
+            
+            // Adiciona as imagens
+            project.images.forEach(image => {
+                const imgElement = document.createElement('img');
+                imgElement.src = image;
+                imgElement.alt = project.title;
+                modalImages.appendChild(imgElement);
+            });
+            
+            modal.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+            
+            // Reset animation
+            modalContent.style.animation = 'none';
+            setTimeout(() => {
+                modalContent.style.animation = 'slideUp 0.5s ease-out forwards';
+            }, 10);
+
+            // Configura o botão de tradução no modal
+            const modalTranslateBtn = document.querySelector('.modal-translate-btn');
+            modalTranslateBtn.onclick = () => {
+                currentLang = currentLang === 'pt' ? 'en' : 'pt';
+                modalTranslateBtn.textContent = currentLang === 'pt' ? 'EN/PT' : 'PT/EN';
+                modalTitle.textContent = currentLang === 'pt' ? project.title : project.titleEn;
+                modalDescription.textContent = currentLang === 'pt' ? project.description : project.descriptionEn;
+                applyTranslations(currentLang);
+            };
+        }
+
+        // Fecha o modal com animação
+        function closeProjectModal() {
+            modalContent.style.animation = 'fadeOutDown 0.5s ease-out forwards';
+            
+            setTimeout(() => {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+                // Reset animation for next open
+                modalContent.style.animation = '';
+            }, 500);
+        }
+
+        // Event listeners para o modal
+        closeModal.addEventListener('click', closeProjectModal);
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeProjectModal();
+            }
+        });
+
+        // Animate elements on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    
+                    if (entry.target.id === 'habilidades') {
+                        const skills = entry.target.querySelectorAll('.skill');
+                        
+                        skills.forEach((skill, index) => {
+                            setTimeout(() => {
+                                const circle = skill.querySelector('.progress');
+                                const percentage = skill.getAttribute('data-percentage');
+                                const radius = 45;
+                                const circumference = 2 * Math.PI * radius;
+                                
+                                circle.style.strokeDasharray = circumference;
+                                circle.style.strokeDashoffset = circumference;
+                                
+                                setTimeout(() => {
+                                    circle.style.strokeDashoffset = circumference - (percentage / 100) * circumference;
+                                }, 100);
+                                
+                            }, index * 200);
+                        });
+                    }
+                }
+            });
+        }, { threshold: 0.3 });
+
+        document.querySelectorAll('section, .video-container').forEach(element => {
+            observer.observe(element);
+        });
+
+        // Animate progress bars on load
+        window.addEventListener('load', () => {
+            document.querySelectorAll('.progress-fill').forEach(bar => {
+                bar.style.width = bar.style.width;
+            });
+            
+            applyTranslations(currentLang);
+            
+            // Update year in footer
+            document.getElementById('year').textContent = new Date().getFullYear();
+            
+            // Load projects
+            loadProjects();
+        });
     </script>
 </body>
 </html>
