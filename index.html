@@ -799,6 +799,60 @@
                 height: 250px;
             }
             
+            .video-showcase {
+                margin: 5rem 0;
+                padding: 0 10%;
+            }
+
+            .video-title {
+                color: var(--primary-color);
+                font-size: 1.8rem;
+                margin-bottom: 0.5rem;
+                text-align: center;
+            }
+
+            .video-description {
+                color: rgba(255,255,255,0.7);
+                text-align: center;
+                margin-bottom: 2rem;
+                font-size: 1.1rem;
+            }
+
+            .video-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 2rem;
+                margin-top: 2rem;
+            }
+
+            .video-item {
+                background: rgba(0,0,0,0.3);
+                border-radius: 8px;
+                overflow: hidden;
+                transition: transform 0.3s;
+            }
+
+            .video-item:hover {
+                transform: translateY(-5px);
+            }
+
+            .video-item video {
+                width: 100%;
+                display: block;
+            }
+
+            .video-item p {
+                padding: 1rem;
+                text-align: center;
+                color: white;
+                font-size: 1rem;
+            }
+
+            @media (max-width: 768px) {
+                .video-grid {
+                    grid-template-columns: 1fr;
+                }
+            }
 
 
 
@@ -1057,6 +1111,12 @@
             </div>
         </section>
 
+
+
+
+
+
+
         <div class="more-projects">
             <p data-translate="maisProjetosTexto">Para mais projetos clique aqui</p>
             <a href="https://drive.google.com/uc?export=download&id=1ONiWYP3zuz4WTdBUzhc38hcJ2kWQsCis" 
@@ -1068,20 +1128,11 @@
         </div>
 
 
+    <section id="habilidades" class="section">
+                <h2 class="section-title" data-translate="habilidadesTecnicas">HABILIDADES TÉCNICAS</h2>
+                
 
-
-
-
-
-
-
- <section id="habilidades" class="section">
-            <h2 class="section-title" data-translate="habilidadesTecnicas">HABILIDADES TÉCNICAS</h2>
-            
-
-            
-
-<div class="skills-container">
+    <div class="skills-container">
     <!-- Adobe -->
     <div class="skill premiere">
         <i class="fas fa-film skill-icon"></i> <!-- Alternativa para Premiere -->
@@ -1260,6 +1311,8 @@
         <p>&copy; <span id="year"></span> Diogo Duarte. <span data-translate="direitosReservados">Todos os direitos reservados.</span></p>
     </footer>
 
+
+    
     <script>
         // Menu Hamburguer Functionality
         const menuBtn = document.querySelector('.navbar .menu-btn');
@@ -1380,6 +1433,10 @@
                 cliqueAqui: "clique aqui",
                 sobreTexto2: "Durante a minha formação, adquiri proficiência em ferramentas como Photoshop, Illustrator, InDesign e outras da Adobe, além de conhecimentos em desenvolvimento web com HTML, CSS, JavaScript, PHP e SQL, permitindo-me criar designs impactantes e estratégicos tanto para meios digitais como impressos.",
                 formacaoItem4: "Desenvolvimento web (HTML, CSS, JavaScript, PHP, SQL)",
+                 videoShowcaseTitle: "Banners Animados para YouTube",
+                videoShowcaseDesc: "Trabalhos criados com After Effects para canais digitais",
+                videoSubTitle: "Banner de Inscrição",
+                videoTwitchTitle: "Banner para Twitch"
             },
             en: {
                 sobreMim: "About Me",
@@ -1454,6 +1511,10 @@
                 cliqueAqui: "click here",
                 sobreTexto2: "During my training, I became proficient in tools like Photoshop, Illustrator, InDesign and other Adobe tools, as well as web development skills with HTML, CSS, JavaScript, PHP and SQL, enabling me to create impactful and strategic designs for both digital and print media.",
                 formacaoItem4: "Web development (HTML, CSS, JavaScript, PHP, SQL)",
+                videoShowcaseTitle: "Animated YouTube Banners",
+                videoShowcaseDesc: "Works created with After Effects for digital channels",
+                videoSubTitle: "Subscription Banner",
+                videoTwitchTitle: "Twitch Banner"
             }
         };
 
@@ -1547,8 +1608,12 @@
                 id: 8,
                 title: "Vídeo para Canal de YouTube",
                 titleEn: "YouTube Channel Video",
-                images: [],
+                images: [
+                    "img/twitch.png",
+                    "img/sub.png",                    
+                ],
                 videos: [
+                    
                     "vid/video sub2.mp4",
                     "vid/video twitch2.mp4"
                 ],
