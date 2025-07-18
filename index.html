@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diogo Duarte - Graphic & Motion Designer | Web Developer</title>
+    <title>Diogo Duarte - Multimedia designer | Web Designer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
@@ -231,6 +231,106 @@
             padding: 1.5rem;
             border-radius: 8px;
         }
+/* NOVA SEÇÃO DE HABILIDADES COM ÍCONES GIGANTES */
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 60px 40px;
+    margin: 5rem auto;
+    padding: 0 40px;
+    max-width: 1200px;
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.skill-icon {
+    font-size: 8rem !important;
+    margin-bottom: 15px;
+    line-height: 1;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.skill:hover .skill-icon {
+    transform: scale(1.1);
+    filter: drop-shadow(0 5px 15px rgba(0,0,0,0.3));
+}
+
+.skill-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-light);
+    text-transform: lowercase;
+    letter-spacing: 0.8px;
+    background: rgba(0,0,0,0.3);
+    padding: 5px 15px;
+    border-radius: 20px;
+    margin-top: 10px;
+}
+
+/* Cores vibrantes */
+.skill.premiere .skill-icon { color: #EA77FF; text-shadow: 0 0 10px rgba(234, 119, 255, 0.5); }
+.skill.illustrator .skill-icon { color: #FF9A00; text-shadow: 0 0 10px rgba(255, 154, 0, 0.5); }
+.skill.aftereffects .skill-icon { color: #0000FF; text-shadow: 0 0 10px rgba(0, 0, 255, 0.5); }
+.skill.photoshop .skill-icon { color: #31A8FF; text-shadow: 0 0 10px rgba(49, 168, 255, 0.5); }
+.skill.xd .skill-icon { color: #FF61F6; text-shadow: 0 0 10px rgba(255, 97, 246, 0.5); }
+.skill.figma .skill-icon { color: #A259FF; text-shadow: 0 0 10px rgba(162, 89, 255, 0.5); }
+.skill.blender .skill-icon { color: #EA7600; text-shadow: 0 0 10px rgba(234, 118, 0, 0.5); }
+.skill.html .skill-icon { color: #E44D26; text-shadow: 0 0 10px rgba(228, 77, 38, 0.5); }
+.skill.css .skill-icon { color: #264DE4; text-shadow: 0 0 10px rgba(38, 77, 228, 0.5); }
+.skill.javascript .skill-icon { color: #F0DB4F; text-shadow: 0 0 10px rgba(240, 219, 79, 0.5); }
+.skill.react .skill-icon { color: #61DAFB; text-shadow: 0 0 10px rgba(97, 218, 251, 0.5); }
+.skill.node .skill-icon { color: #68A063; text-shadow: 0 0 10px rgba(104, 160, 99, 0.5); }
+
+.skill-icon img {
+    width: 8rem;
+    height: 8rem;
+    object-fit: contain;
+}
+
+@media (max-width: 1024px) {
+    .skill-icon img {
+        width: 6rem;
+        height: 6rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .skill-icon img {
+        width: 5rem;
+        height: 5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .skill-icon img {
+        width: 4rem;
+        height: 4rem;
+    }
+}
+
+@media (min-width: 1600px) {
+    .skill-icon img {
+        width: 10rem;
+        height: 10rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
         .skills-container {
             display: grid;
@@ -242,76 +342,47 @@
             padding: 20px;
         }
 
-        .skill {
-            position: relative;
-            width: 160px;
-            height: 160px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-between;
-        }
+      @media (max-width: 1024px) {
+    .skill-icon {
+        font-size: 6rem !important;
+    }
+}
 
-        .skill-chart {
-            position: relative;
-            width: 120px;
-            height: 120px;
-        }
+@media (max-width: 768px) {
+    .skills-container {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 40px;
+    }
+    
+    .skill-icon {
+        font-size: 5rem !important;
+    }
+    
+    .skill-title {
+        font-size: 1rem;
+    }
+}
 
-        .skill svg {
-            transform: rotate(-90deg);
-            width: 100%;
-            height: 100%;
-        }
+@media (max-width: 480px) {
+    .skills-container {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 30px;
+    }
+    
+    .skill-icon {
+        font-size: 4rem !important;
+    }
+    
+    .skill-title {
+        font-size: 0.9rem;
+    }
+}
 
-        .skill circle {
-            fill: none;
-            stroke-width: 10;
-            stroke-linecap: round;
-        }
-
-        .skill .background {
-            stroke: rgba(255, 255, 255, 0.1);
-        }
-
-        .skill .progress {
-            stroke-dasharray: 314;
-            stroke-dashoffset: 314;
-            transition: stroke-dashoffset 1.5s ease-out;
-        }
-
-        .skill .percentage {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 1.8rem;
-            font-weight: bold;
-            color: var(--text-light);
-            text-align: center;
-            width: 100%;
-        }
-
-        .skill-title {
-            text-align: center;
-            margin-top: 15px;
-            font-size: 0.95rem;
-            font-weight: 600;
-            color: var(--text-light);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            width: 100%;
-            line-height: 1.3;
-        }
-
-        .premiere .progress { stroke: var(--premiere-color); }
-        .illustrator .progress { stroke: var(--illustrator-color); }
-        .aftereffects .progress { stroke: var(--aftereffects-color); }
-        .photoshop .progress { stroke: var(--photoshop-color); }
-        .uiux .progress { stroke: var(--uiux-color); }
-        .html .progress { stroke: var(--html-color); }
-        .css .progress { stroke: var(--css-color); }
-        .javascript .progress { stroke: var(--js-color); }
+@media (min-width: 1600px) {
+    .skill-icon {
+        font-size: 10rem !important;
+    }
+}
 
         .progress-bars {
             display: grid;
@@ -728,20 +799,107 @@
                 height: 250px;
             }
             
-            .skills-container {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-            
-            .skill {
-                width: 130px;
-                height: 130px;
-            }
-            
-            .skill-title {
-                font-size: 0.8rem;
-                margin-top: 20px;
-            }
+
+
+
+
+
+
+
+
+
+@media (min-width: 1600px) {
+    .skill-icon {
+        font-size: 10rem !important;
+    }
+}
+
+
+/* HABILIDADES - ÍCONES GIGANTES */
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 60px 40px;
+    margin: 5rem auto;
+    padding: 0 40px;
+    max-width: 1200px;
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.skill-icon {
+    font-size: 8rem !important; /* Tamanho gigante */
+    margin-bottom: 15px;
+    line-height: 1;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.skill:hover .skill-icon {
+    transform: scale(1.1);
+    filter: drop-shadow(0 5px 15px rgba(0,0,0,0.3));
+}
+
+.skill-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-light);
+    text-transform: lowercase;
+    letter-spacing: 0.8px;
+    background: rgba(0,0,0,0.3);
+    padding: 5px 15px;
+    border-radius: 20px;
+    margin-top: 10px;
+}
+
+/* Cores vibrantes */
+.skill.premiere .skill-icon { color: #EA77FF; text-shadow: 0 0 10px rgba(234, 119, 255, 0.5); }
+.skill.illustrator .skill-icon { color: #FF9A00; text-shadow: 0 0 10px rgba(255, 154, 0, 0.5); }
+/* [...] (mantenha as outras cores como no código anterior) */
+
+
+.skill-icon[class^="si-"], 
+.skill-icon[class*=" si-"] {
+    font-size: 1em; /* Herda o tamanho definido para .skill-icon */
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.125em; /* Alinhamento perfeito */
+}
+
+/* Cores vibrantes (mantém as que já tens) */
+.skill.premiere .skill-icon { color: #EA77FF; text-shadow: 0 0 10px rgba(234, 119, 255, 0.5); }
+.skill.illustrator .skill-icon { color: #FF9A00; text-shadow: 0 0 10px rgba(255, 154, 0, 0.5); }
+.skill.aftereffects .skill-icon { color: #0000FF; text-shadow: 0 0 10px rgba(0, 0, 255, 0.5); }
+.skill.photoshop .skill-icon { color: #31A8FF; text-shadow: 0 0 10px rgba(49, 168, 255, 0.5); }
+.skill.xd .skill-icon { color: #FF61F6; text-shadow: 0 0 10px rgba(255, 97, 246, 0.5); }
+.skill.figma .skill-icon { color: #A259FF; text-shadow: 0 0 10px rgba(162, 89, 255, 0.5); }
+.skill.blender .skill-icon { color: #EA7600; text-shadow: 0 0 10px rgba(234, 118, 0, 0.5); }
+.skill.html .skill-icon { color: #E44D26; text-shadow: 0 0 10px rgba(228, 77, 38, 0.5); }
+.skill.css .skill-icon { color: #264DE4; text-shadow: 0 0 10px rgba(38, 77, 228, 0.5); }
+.skill.javascript .skill-icon { color: #F0DB4F; text-shadow: 0 0 10px rgba(240, 219, 79, 0.5); }
+.skill.react .skill-icon { color: #61DAFB; text-shadow: 0 0 10px rgba(97, 218, 251, 0.5); }
+.skill.node .skill-icon { color: #68A063; text-shadow: 0 0 10px rgba(104, 160, 99, 0.5); }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
             .progress-bars {
                 margin-top: 3rem;
@@ -756,7 +914,7 @@
             }
         }
 
- /* Novo estilo para a seção "Mais Projetos" */
+        /* Novo estilo para a seção "Mais Projetos" */
         .more-projects {
             text-align: center;
             margin-top: 3rem;
@@ -788,10 +946,6 @@
             transform: translateY(-3px);
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
         }
-
-
-
-
     </style>
 </head>
 <body>
@@ -825,7 +979,7 @@
     <div class="main-content">
         <div class="name-line">DIOGO</div>
         <div class="name-line">DUARTE</div>
-        <div class="title" data-translate="titulo">Multimedia Designer & Web Designer</div>
+        <div class="title" data-translate="titulo">Multimedia designer | Web Designer</div>
 
         <section id="downloads" class="section downloads-section">
             <h2 class="section-title" data-translate="downloads">DOWNLOADS</h2>
@@ -849,18 +1003,19 @@
             </div>
         </section>
 
-   <div id="video" class="video-container"> 
-    <video width="100%" controls autoplay loop muted playsinline>
-        <source src="vid/Comp1.mp4" type="video/mp4">
-        Seu navegador não suporta o elemento de vídeo.
-    </video>
-</div>
-              <section id="sobre-mim" class="section">
-         <h2 class="section-title" data-translate="sobreMim">SOBRE MIM</h2>
-          <div class="about-content">
-              <p data-translate="sobreTexto1">Sou o Diogo, licenciado em Engenharia Multimédia, apaixonado por oferecer experiências visuais ao nível de branding, edição de video e publicidade. Apesar de estar no início da minha carreira, tenho um forte sentido de criatividade sempre com entusiasmo e vontade de aprender.</p>
-             <p data-translate="sobreTexto2">Durante a minha formação, adquiri proficiência em ferramentas como Photoshop, Illustrator, InDesign e outras da Adobe, além de conhecimentos em desenvolvimento web com HTML, CSS, JavaScript, PHP e SQL, permitindo-me criar designs impactantes e estratégicos tanto para meios digitais como impressos.</p>
-          </div>
+        <div id="video" class="video-container"> 
+            <video width="100%" controls autoplay loop muted playsinline>
+                <source src="vid/Comp1.mp4" type="video/mp4">
+                Seu navegador não suporta o elemento de vídeo.
+            </video>
+        </div>
+
+        <section id="sobre-mim" class="section">
+            <h2 class="section-title" data-translate="sobreMim">SOBRE MIM</h2>
+            <div class="about-content">
+                <p data-translate="sobreTexto1">Sou o Diogo, licenciado em Engenharia Multimédia, apaixonado por oferecer experiências visuais ao nível de branding, edição de video e publicidade. Apesar de estar no início da minha carreira, tenho um forte sentido de criatividade sempre com entusiasmo e vontade de aprender.</p>
+                <p data-translate="sobreTexto2">Durante a minha formação, adquiri proficiência em ferramentas como Photoshop, Illustrator, InDesign e outras da Adobe, além de conhecimentos em desenvolvimento web com HTML, CSS, JavaScript, PHP e SQL, permitindo-me criar designs impactantes e estratégicos tanto para meios digitais como impressos.</p>
+            </div>
         </section>
 
         <section id="percurso" class="section">
@@ -883,16 +1038,16 @@
                 </ul>
             </div>
 
-                    <h2 class="section-title" data-translate="formacao">FORMAÇÃO ACADÊMICA</h2>
-        <div class="experience-item">
-            <h3 data-translate="formacaoTitulo">ISTEC - Engenharia Multimédia</h3>
-         <ul>
-                <li data-translate="formacaoItem1">Edição de vídeo avançada</li>
-                <li data-translate="formacaoItem2">Criação de componentes UI/UX</li>
-             <li data-translate="formacaoItem3">Modelação 3D</li>
-             <li data-translate="formacaoItem4">Desenvolvimento web (HTML, CSS, JavaScript, PHP, SQL)</li>
-          </ul>
-        </div>
+            <h2 class="section-title" data-translate="formacao">FORMAÇÃO ACADÊMICA</h2>
+            <div class="experience-item">
+                <h3 data-translate="formacaoTitulo">ISTEC - Engenharia Multimédia</h3>
+                <ul>
+                    <li data-translate="formacaoItem1">Edição de vídeo avançada</li>
+                    <li data-translate="formacaoItem2">Criação de componentes UI/UX</li>
+                    <li data-translate="formacaoItem3">Modelação 3D</li>
+                    <li data-translate="formacaoItem4">Desenvolvimento web (HTML, CSS, JavaScript, PHP, SQL)</li>
+                </ul>
+            </div>
         </section>
 
         <section id="galeria" class="section gallery">
@@ -902,9 +1057,7 @@
             </div>
         </section>
 
-
-
-<div class="more-projects">
+        <div class="more-projects">
             <p data-translate="maisProjetosTexto">Para mais projetos clique aqui</p>
             <a href="https://drive.google.com/uc?export=download&id=1ONiWYP3zuz4WTdBUzhc38hcJ2kWQsCis" 
                class="portfolio-link" 
@@ -913,164 +1066,100 @@
                 Ver Portfólio Completo
             </a>
         </div>
-    </section>
 
 
 
-        <section id="habilidades" class="section">
+
+
+
+
+
+
+ <section id="habilidades" class="section">
             <h2 class="section-title" data-translate="habilidadesTecnicas">HABILIDADES TÉCNICAS</h2>
             
-            <div class="skills-container">
-                <div class="skill premiere" data-percentage="90">
-                    <div class="skill-chart">
-                        <svg viewBox="0 0 100 100">
-                            <circle class="background" cx="50" cy="50" r="45" />
-                            <circle class="progress" cx="50" cy="50" r="45" />
-                        </svg>
-                        <div class="percentage">90%</div>
-                    </div>
-                    <div class="skill-title">PREMIERE PRO</div>
-                </div>
-                
-                <div class="skill uiux" data-percentage="75">
-                    <div class="skill-chart">
-                        <svg viewBox="0 0 100 100">
-                            <circle class="background" cx="50" cy="50" r="45" />
-                            <circle class="progress" cx="50" cy="50" r="45" />
-                        </svg>
-                        <div class="percentage">75%</div>
-                    </div>
-                    <div class="skill-title">UI/UX DESIGN</div>
-                </div>
-                
-                <div class="skill illustrator" data-percentage="90">
-                    <div class="skill-chart">
-                        <svg viewBox="0 0 100 100">
-                            <circle class="background" cx="50" cy="50" r="45" />
-                            <circle class="progress" cx="50" cy="50" r="45" />
-                        </svg>
-                        <div class="percentage">90%</div>
-                    </div>
-                    <div class="skill-title">ILLUSTRATOR</div>
-                </div>
-                
-                <div class="skill html" data-percentage="90">
-                    <div class="skill-chart">
-                        <svg viewBox="0 0 100 100">
-                            <circle class="background" cx="50" cy="50" r="45" />
-                            <circle class="progress" cx="50" cy="50" r="45" />
-                        </svg>
-                        <div class="percentage">90%</div>
-                    </div>
-                    <div class="skill-title">HTML</div>
-                </div>
-                
-                <div class="skill aftereffects" data-percentage="90">
-                    <div class="skill-chart">
-                        <svg viewBox="0 0 100 100">
-                            <circle class="background" cx="50" cy="50" r="45" />
-                            <circle class="progress" cx="50" cy="50" r="45" />
-                        </svg>
-                        <div class="percentage">90%</div>
-                    </div>
-                    <div class="skill-title">AFTER EFFECTS</div>
-                </div>
-                
-                <div class="skill css" data-percentage="70">
-                    <div class="skill-chart">
-                        <svg viewBox="0 0 100 100">
-                            <circle class="background" cx="50" cy="50" r="45" />
-                            <circle class="progress" cx="50" cy="50" r="45" />
-                        </svg>
-                        <div class="percentage">70%</div>
-                    </div>
-                    <div class="skill-title">CSS</div>
-                </div>
-                
-                <div class="skill photoshop" data-percentage="85">
-                    <div class="skill-chart">
-                        <svg viewBox="0 0 100 100">
-                            <circle class="background" cx="50" cy="50" r="45" />
-                            <circle class="progress" cx="50" cy="50" r="45" />
-                        </svg>
-                        <div class="percentage">85%</div>
-                    </div>
-                    <div class="skill-title">PHOTOSHOP</div>
-                </div>
-                
-                <div class="skill javascript" data-percentage="60">
-                    <div class="skill-chart">
-                        <svg viewBox="0 0 100 100">
-                            <circle class="background" cx="50" cy="50" r="45" />
-                            <circle class="progress" cx="50" cy="50" r="45" />
-                        </svg>
-                        <div class="percentage">60%</div>
-                    </div>
-                    <div class="skill-title">JAVASCRIPT</div>
-                </div>
-            </div>
+
+            
+
+<div class="skills-container">
+    <!-- Adobe -->
+    <div class="skill premiere">
+        <i class="fas fa-film skill-icon"></i> <!-- Alternativa para Premiere -->
+        <div class="skill-title">premiere pro</div>
+    </div>
+    
+    <div class="skill illustrator">
+        <i class="fas fa-pen-fancy skill-icon"></i> <!-- Melhor para Illustrator -->
+        <div class="skill-title">illustrator</div>
+    </div>
+    
+    <div class="skill aftereffects">
+        <i class="fas fa-magic skill-icon"></i> <!-- Representa efeitos -->
+        <div class="skill-title">after effects</div>
+    </div>
+    
+    <div class="skill photoshop">
+        <i class="fas fa-camera-retro skill-icon"></i> <!-- Para edição de foto -->
+        <div class="skill-title">photoshop</div>
+    </div>
+    
+    <div class="skill xd">
+        <i class="fas fa-mobile-alt skill-icon"></i> <!-- Para design de interface -->
+        <div class="skill-title">adobe xd</div>
+    </div>
+
+    <!-- Design -->
+    <div class="skill figma">
+        <i class="fab fa-figma skill-icon"></i>
+        <div class="skill-title">figma</div>
+    </div>
+    
+    <!-- 3D -->
+    <div class="skill blender">
+        <i class="fas fa-cube skill-icon"></i>
+        <div class="skill-title">blender</div>
+    </div>
+    
+    <!-- Web -->
+    <div class="skill html">
+        <i class="fab fa-html5 skill-icon"></i>
+        <div class="skill-title">html5</div>
+    </div>
+    
+    <div class="skill css">
+        <i class="fab fa-css3-alt skill-icon"></i>
+        <div class="skill-title">css3</div>
+    </div>
+    
+    <div class="skill javascript">
+        <i class="fab fa-js-square skill-icon"></i>
+        <div class="skill-title">javascript</div>
+    </div>
+    
+    <div class="skill react">
+        <i class="fab fa-react skill-icon"></i>
+        <div class="skill-title">react</div>
+    </div>
+    
+    <div class="skill node">
+        <i class="fab fa-node-js skill-icon"></i>
+        <div class="skill-title">node.js</div>
+    </div>
+</div>
 
 
-             
 
 
-            <h2 class="section-title" style="margin-top: 4rem;" data-translate="competencias">COMPETÊNCIAS</h2>
-            <div class="progress-bars">
-                <div class="progress-bar">
-                    <div class="progress-info">
-                        <span class="progress-name" data-translate="trabalhoEquipa">Trabalho em Equipa</span>
-                        <span class="progress-percent" data-translate="trabalhoEquipaPercent">90%</span>
-                    </div>
-                    <div class="progress-track">
-                        <div class="progress-fill" style="width: 90%"></div>
-                    </div>
-                </div>
-                
-                <div class="progress-bar">
-                    <div class="progress-info">
-                        <span class="progress-name" data-translate="comunicacao">Comunicação</span>
-                        <span class="progress-percent" data-translate="comunicacaoPercent">85%</span>
-                    </div>
-                    <div class="progress-track">
-                        <div class="progress-fill" style="width: 85%"></div>
-                    </div>
-                </div>
-                
-                <div class="progress-bar">
-                    <div class="progress-info">
-                        <span class="progress-name" data-translate="aprendizado">Aprendizagem Contínua</span>
-                        <span class="progress-percent" data-translate="aprendizadoPercent">95%</span>
-                    </div>
-                    <div class="progress-track">
-                        <div class="progress-fill" style="width: 95%"></div>
-                    </div>
-                </div>
 
-                <h3 class="language-title" data-translate="idiomas">IDIOMAS</h3>
-                
-                <div class="progress-bar">
-                    <div class="progress-info">
-                        <span class="progress-name" data-translate="ingles">Inglês</span>
-                        <span class="progress-percent" data-translate="inglesNivel">Avançado</span>
-                    </div>
-                    <div class="progress-track">
-                        <div class="progress-fill" style="width: 80%"></div>
-                    </div>
-                </div>
-                
-                <div class="progress-bar">
-                    <div class="progress-info">
-                        <span class="progress-name" data-translate="portugues">Português</span>
-                        <span class="progress-percent" data-translate="portuguesNivel">Nativo</span>
-                    </div>
-                    <div class="progress-track">
-                        <div class="progress-fill" style="width: 100%"></div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <section id="competencias" class="section competencies-section">
+
+
+
+
+
+
+       
+<section id="competencias" class="section competencies-section">
             <h2 class="section-title" data-translate="competenciasPrincipais">COMPETÊNCIAS PRINCIPAIS</h2>
             <div class="competencies-grid">
                 <div class="competency-card">
@@ -1117,12 +1206,39 @@
                     <div class="competency-icon">
                         <i class="fas fa-book"></i>
                     </div>
-                    <h3 class="competency-title" data-translate="aprendizadoContinuo">Aprendizagem Contínua</h3>
-                    <p class="competency-description" data-translate="aprendizadoContinuoDesc">Dedicação constante ao melhoramento profissional, acompanhando tendências e novas tecnologias de design.</p>
+                    <h3 class="competency-title" data-translate="aprendizagemcontinua">Aprendizagem Contínua</h3>
+                    <p class="competency-description" data-translate="aprendizagemcontinuaDesc">Dedicação constante ao melhoramento profissional, acompanhando tendências e novas tecnologias de design.</p>
+                </div>
+            </div>
+        </section>            
+
+
+            
+                
+
+                <h3 class="language-title" data-translate="idiomas">IDIOMAS</h3>
+                
+                <div class="progress-bar">
+                    <div class="progress-info">
+                        <span class="progress-name" data-translate="ingles">Inglês</span>
+                        <span class="progress-percent" data-translate="inglesNivel">Avançado</span>
+                    </div>
+                    <div class="progress-track">
+                        <div class="progress-fill" style="width: 80%"></div>
+                    </div>
+                </div>
+                
+                <div class="progress-bar">
+                    <div class="progress-info">
+                        <span class="progress-name" data-translate="portugues">Português</span>
+                        <span class="progress-percent" data-translate="portuguesNivel">Nativo</span>
+                    </div>
+                    <div class="progress-track">
+                        <div class="progress-fill" style="width: 100%"></div>
+                    </div>
                 </div>
             </div>
         </section>
-
     </div>
 
     <!-- Modal para detalhes do projeto -->
@@ -1199,7 +1315,7 @@
                 contactos: "Contactos",
                 downloads: "Downloads",
                 video: "Vídeo",
-                titulo: "Multimedia Designer & Web Designer",
+                titulo: "Desenvolvedor Multimédia | Web Designer",
                 sobreTexto1: "Sou o Diogo, licenciado em Engenharia Multimédia, apaixonado por oferecer experiências visuais ao nível de branding, edição de video e publicidade. Apesar de estar no início da minha carreira, tenho um forte sentido de criatividade sempre com entusiasmo e vontade de aprender.",
                 sobreTexto2: "Durante a minha formação, adquiri proficiência em ferramentas como Photoshop, Illustrator, InDesign e outras da Adobe, permitindo-me criar designs impactantes e estratégicos.",
                 interesses: "Principais Interesses:",
@@ -1237,8 +1353,8 @@
                 trabalhoEquipaPercent: "90%",
                 comunicacao: "Comunicação",
                 comunicacaoPercent: "85%",
-                aprendizado: "Aprendizagem Contínua",
-                aprendizadoPercent: "95%",
+                aprendizagem: "Aprendizagem Contínua",
+                aprendizagemPercent: "95%",
                 criatividade: "Criatividade",
                 criatividadeDesc: "Capacidade de pensar fora da caixa e desenvolver soluções visuais inovadoras e impactantes para projetos de design.",
                 colaboracao: "Colaboração",
@@ -1247,8 +1363,8 @@
                 gestaoTempoDesc: "Capacidade de organizar e priorizar tarefas para cumprir prazos sem comprometer a qualidade do trabalho.",
                 resolucaoProblemas: "Resolução de Problemas",
                 resolucaoProblemasDesc: "Capacidade de analisar desafios de design e desenvolver soluções criativas e funcionais.",
-                aprendizadoContinuo: "Aprendizado Contínuo",
-                aprendizadoContinuoDesc: "Dedicação constante ao aprimoramento profissional, acompanhando tendências e novas tecnologias de design.",
+                aprendizagemcontinua: "aprendizagem Contínua",
+                aprendizagemcontinuaDesc: "Dedicação constante ao aprimoramento profissional, acompanhando tendências e novas tecnologias de design.",
                 idiomas: "IDIOMAS",
                 ingles: "Inglês",
                 inglesNivel: "Avançado",
@@ -1273,7 +1389,7 @@
                 contactos: "Contacts",
                 downloads: "Downloads",
                 video: "Video",
-                titulo: "Multimedia Designer & Web Designer",
+                titulo: "Multimedia designer | Web Designer",
                 sobreTexto1: "I'm Diogo, with a degree in Multimedia Engineering, passionate about delivering visual experiences in branding, video editing and advertising. Although at the beginning of my career, I have a strong creative sense always with enthusiasm and willingness to learn.",
                 sobreTexto2: "During my training, I became proficient in tools like Photoshop, Illustrator, InDesign and other Adobe tools, enabling me to create impactful and strategic designs.",
                 interesses: "Main Interests:",
@@ -1311,8 +1427,8 @@
                 trabalhoEquipaPercent: "90%",
                 comunicacao: "Communication",
                 comunicacaoPercent: "85%",
-                aprendizado: "Continuous Learning",
-                aprendizadoPercent: "95%",
+                aprendizagem: "continuaus Learning",
+                aprendizagemPercent: "95%",
                 criatividade: "Creativity",
                 criatividadeDesc: "Ability to think outside the box and develop innovative and impactful visual solutions for design projects.",
                 colaboracao: "Collaboration",
@@ -1321,8 +1437,8 @@
                 gestaoTempoDesc: "Ability to organize and prioritize tasks to meet deadlines without compromising work quality.",
                 resolucaoProblemas: "Problem Solving",
                 resolucaoProblemasDesc: "Ability to analyze design challenges and develop creative and functional solutions.",
-                aprendizadoContinuo: "Continuous Learning",
-                aprendizadoContinuoDesc: "Constant dedication to professional improvement, following trends and new design technologies.",
+                aprendizagemcontinua: "continuaus Learning",
+                aprendizagemcontinuaDesc: "Constant dedication to professional improvement, following trends and new design technologies.",
                 idiomas: "LANGUAGES",
                 ingles: "English",
                 inglesNivel: "Advanced",
@@ -1337,7 +1453,7 @@
                 verPortfolio: "View Full Portfolio",
                 cliqueAqui: "click here",
                 sobreTexto2: "During my training, I became proficient in tools like Photoshop, Illustrator, InDesign and other Adobe tools, as well as web development skills with HTML, CSS, JavaScript, PHP and SQL, enabling me to create impactful and strategic designs for both digital and print media.",
-             formacaoItem4: "Web development (HTML, CSS, JavaScript, PHP, SQL)",
+                formacaoItem4: "Web development (HTML, CSS, JavaScript, PHP, SQL)",
             }
         };
 
@@ -1410,7 +1526,6 @@
                 titleEn: "Hotdog Branding",
                 images: [
                     "img/hotdog.png",
-                    
                 ],
                 description: "Desafio pessoal de criar uma mascote para rede de restaurantes com tema anos 1920. Desenvolvi personagem, logotipo e elementos visuais inspirados na art déco. Processo incluiu pesquisa histórica e desenvolvimento de identidade visual coesa.",
                 descriptionEn: "Personal challenge to create a mascot for a restaurant chain with 1920s theme. I developed character, logo and visual elements inspired by art deco. Process included historical research and cohesive visual identity development."
@@ -1427,6 +1542,18 @@
                 ],
                 description: "Série de 4 livros explicando cada estação do ano. Processo criativo incluiu pesquisa iconográfica, desenvolvimento de paletas de cores específicas para cada estação e criação de elementos gráficos que representam as características climáticas e culturais de cada período.",
                 descriptionEn: "Series of 4 books explaining each season. Creative process included iconographic research, development of specific color palettes for each season and creation of graphic elements representing climatic and cultural characteristics of each period."
+            },
+            {
+                id: 8,
+                title: "Vídeo para Canal de YouTube",
+                titleEn: "YouTube Channel Video",
+                images: [],
+                videos: [
+                    "vid/video sub2.mp4",
+                    "vid/video twitch2.mp4"
+                ],
+                description: "Trabalho freelance criando conteúdo visual para um canal de YouTube. Utilizei After Effects para criar motion graphics e elementos visuais dinâmicos que melhoram a narrativa do vídeo. O projeto incluiu edição de vídeo, sincronização de áudio e criação de transições personalizadas.",
+                descriptionEn: "Freelance work creating visual content for a YouTube channel. I used After Effects to create motion graphics and dynamic visual elements that enhance the video's narrative. The project included video editing, audio synchronization, and creation of custom transitions."
             }
         ];
 
@@ -1444,9 +1571,23 @@
             projects.forEach(project => {
                 const projectElement = document.createElement('div');
                 projectElement.className = 'gallery-item';
-                projectElement.innerHTML = `
-                    <img src="${project.images[0]}" alt="${project.title}">
-                `;
+                
+                // Verifica se há imagens para mostrar como thumbnail
+                if (project.images.length > 0) {
+                    projectElement.innerHTML = `
+                        <img src="${project.images[0]}" alt="${project.title}">
+                    `;
+                } else if (project.video || project.videos) {
+                    // Se não houver imagens, mas houver vídeo, usa o primeiro vídeo como thumbnail
+                    const videoSrc = project.video || (project.videos && project.videos[0]);
+                    projectElement.innerHTML = `
+                        <video width="100%" height="200" muted loop playsinline>
+                            <source src="${videoSrc}" type="video/mp4">
+                            Seu navegador não suporta o elemento de vídeo.
+                        </video>
+                    `;
+                }
+                
                 projectElement.addEventListener('click', () => openProjectModal(project));
                 galleryContainer.appendChild(projectElement);
             });
@@ -1458,8 +1599,29 @@
             modalImages.innerHTML = '';
             modalDescription.textContent = currentLang === 'pt' ? project.description : project.descriptionEn;
             
-            // Adiciona o vídeo se existir
-            if (project.video) {
+            // Adiciona vídeos se existirem
+            if (project.videos) {
+                project.videos.forEach(videoSrc => {
+                    const videoContainer = document.createElement('div');
+                    videoContainer.className = 'modal-video-container';
+                    videoContainer.innerHTML = `
+                        <video class="modal-video" controls autoplay loop muted playsinline>
+                            <source src="${videoSrc}" type="video/mp4">
+                            Seu navegador não suporta o elemento de vídeo.
+                        </video>
+                    `;
+                    modalImages.appendChild(videoContainer);
+                    
+                    // Forçar autoplay programaticamente
+                    setTimeout(() => {
+                        const video = videoContainer.querySelector('video');
+                        if (video) {
+                            video.play().catch(e => console.log('Autoplay prevented:', e));
+                        }
+                    }, 300);
+                });
+            } else if (project.video) {
+                // Para compatibilidade com projetos antigos que usam apenas 'video'
                 const videoContainer = document.createElement('div');
                 videoContainer.className = 'modal-video-container';
                 videoContainer.innerHTML = `
