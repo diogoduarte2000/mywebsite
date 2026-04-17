@@ -266,13 +266,13 @@ document.addEventListener('DOMContentLoaded', function() {
                     experience: {
                         title: 'Experi\u00eancia Profissional',
                         roles: [
-                            'Web Designer e Desenvolvedor',
+                            'Desenvolvedor Web',
                             'Web Designer',
                             'Designer de Motion Graphics',
                             'Desenvolvedor Freelance'
                         ],
                         descriptions: [
-                            'Desenvolvedor Web e Designer especializado na cria\u00e7\u00e3o de websites, branding e suportes visuais para campanhas digitais. Respons\u00e1vel pelo design e desenvolvimento front-end de plataformas web e materiais gr\u00e1ficos para marketing digital.',
+                            'Desenvolvedor Web especializado na cria\u00e7\u00e3o de websites, branding e suportes visuais para campanhas digitais. Respons\u00e1vel pelo design e desenvolvimento front-end de plataformas web e materiais gr\u00e1ficos para marketing digital.',
                             'Atua\u00e7\u00e3o como Web Designer, desenvolvendo websites, landing pages e suportes visuais para campanhas digitais. Trabalho com design responsivo, identidade visual e otimiza\u00e7\u00e3o de interfaces para melhor experi\u00eancia do utilizador.',
                             'Designer especializado em anima\u00e7\u00f5es e motion graphics. Respons\u00e1vel pela produ\u00e7\u00e3o de conte\u00fados animados, v\u00eddeos promocionais e materiais gr\u00e1ficos para campanhas digitais e redes sociais.',
                             'Desenvolvimento de projetos freelance focados em branding, motion design e desenvolvimento web personalizado. Trabalho com clientes para criar solu\u00e7\u00f5es digitais customizadas, desde websites at\u00e9 aplica\u00e7\u00f5es web completas.'
@@ -386,13 +386,13 @@ document.addEventListener('DOMContentLoaded', function() {
                     experience: {
                         title: 'Professional Experience',
                         roles: [
-                            'Web Designer & Developer',
+                            'Web Developer',
                             'Web Designer',
                             'Motion Graphics Designer',
                             'Freelance Developer'
                         ],
                         descriptions: [
-                            'Web Developer and Designer specialized in creating websites, branding, and visual assets for digital campaigns. Responsible for the front-end design and development of web platforms and graphic materials for digital marketing.',
+                            'Web Developer specialized in creating websites, branding, and visual assets for digital campaigns. Responsible for the front-end design and development of web platforms and graphic materials for digital marketing.',
                             'Worked as a Web Designer, developing websites, landing pages, and visual assets for digital campaigns. Focused on responsive design, visual identity, and interface optimization for a better user experience.',
                             'Designer specialized in animation and motion graphics. Responsible for producing animated content, promotional videos, and graphic materials for digital campaigns and social media.',
                             'Development of freelance projects focused on branding, motion design, and custom web development. Working with clients to create tailored digital solutions, from websites to complete web applications.'
