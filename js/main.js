@@ -396,7 +396,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         descriptions: [
                             'Web Developer specialized in creating websites, branding, and visual assets for digital campaigns. Responsible for the front-end design and development of web platforms and graphic materials for digital marketing.',
                             'Worked as a Web Designer, developing websites, landing pages, and visual assets for digital campaigns. Focused on responsive design, visual identity, and interface optimization for a better user experience.',
-                            'Designer specialized in animation and motion graphics. Responsible for producing animated content, promotional videos, and graphic materials for digital campaigns and social media.',
+                            'Multimedia Developer specialized in creating digital content, animations and motion graphics. Responsible for producing promotional videos, graphic materials and developing interactive multimedia solutions for digital campaigns and social media.',
                             'Development of freelance projects focused on branding, motion design, and custom web development. Working with clients to create tailored digital solutions, from websites to complete web applications.'
                         ],
                         dates: ['2022 - Present', '2021 - 2022', '2020 - 2021', '2019 - Present'],
