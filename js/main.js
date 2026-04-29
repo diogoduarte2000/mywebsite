@@ -461,14 +461,22 @@ document.addEventListener('DOMContentLoaded', function() {
             function setCategoryTitle(index, iconClass, label) {
                 const titles = document.querySelectorAll('.category-title');
                 if (titles[index]) {
-                    titles[index].innerHTML = `<i class="${iconClass}"></i> ${label}`;
+                    const icon = document.createElement('i');
+                    icon.className = iconClass;
+                    titles[index].textContent = '';
+                    titles[index].appendChild(icon);
+                    titles[index].appendChild(document.createTextNode(' ' + label));
                 }
             }
 
             function setDownloadButton(selector, label) {
                 const button = document.querySelector(selector);
                 if (button) {
-                    button.innerHTML = `<i class="fas fa-download"></i> ${label}`;
+                    const icon = document.createElement('i');
+                    icon.className = 'fas fa-download';
+                    button.textContent = '';
+                    button.appendChild(icon);
+                    button.appendChild(document.createTextNode(' ' + label));
                 }
             }
 
@@ -522,78 +530,6 @@ document.addEventListener('DOMContentLoaded', function() {
             translateBtn.addEventListener('click', () => {
                 isEnglish = !isEnglish;
                 applyTranslations(isEnglish ? 'en' : 'pt');
-                // Legacy manual translation block below is intentionally bypassed.
-                return;
-                
-                if (isEnglish) {
-                    // Traduzir para inglês
-                    translateBtn.textContent = 'PT';
-                    document.querySelector('.hero-subtitle').textContent = 'Multimedia Designer & Web Developer';
-                    document.querySelector('.hero-description').textContent = 'I create impressive digital experiences by combining creative design and technical development to bring your ideas to life.';
-                    document.querySelector('#download-cv').textContent = 'Download CV';
-                    document.querySelector('#download-portfolio').textContent = 'Download Portfolio';
-                    document.querySelector('.section-title').textContent = 'About Me';
-                    document.querySelector('.about-skills h3').textContent = 'Main Skills';
-                    document.querySelectorAll('.skill-tag')[0].textContent = 'Front-end Development';
-                    document.querySelectorAll('.skill-tag')[1].textContent = 'Back-end Development';
-                    document.querySelectorAll('.skill-tag')[2].textContent = 'UI/UX Design';
-                    document.querySelector('.skills .section-title').textContent = 'Technical Skills';
-                    document.querySelectorAll('.category-title')[0].innerHTML = '<i class="fas fa-palette"></i> Design & Multimedia';
-                    document.querySelectorAll('.category-title')[1].innerHTML = '<i class="fas fa-code"></i> Web Development';
-                    document.querySelector('.skills-showcase .section-title').textContent = 'My Specialties';
-                    document.querySelectorAll('.showcase-title')[0].textContent = 'Front-end Development';
-                    document.querySelectorAll('.showcase-description')[0].textContent = 'I create modern and responsive interfaces using the latest web technologies. I focus on performance, accessibility and user experience to ensure each project is visually impressive and functional on all devices.';
-                    document.querySelectorAll('.showcase-title')[1].textContent = 'Back-end Development';
-                    document.querySelectorAll('.showcase-description')[1].textContent = 'I develop robust APIs and server-side systems that ensure performance and security. I use the best development practices to create scalable solutions that meet the specific needs of each project.';
-                    document.querySelectorAll('.showcase-title')[2].textContent = 'Design & Multimedia';
-                    document.querySelectorAll('.showcase-description')[2].textContent = 'I combine creativity and technique to create impactful visual identities and engaging multimedia content. From branding to motion graphics, each project is treated with attention to detail and focus on effective visual communication.';
-                    document.querySelector('.contact .section-title').textContent = 'Contact';
-                    document.querySelector('.download-section h3').textContent = 'Documents';
-                    document.querySelector('#download-cv-contact').innerHTML = '<i class="fas fa-download"></i> Download CV';
-                    document.querySelector('#download-portfolio-contact').innerHTML = '<i class="fas fa-download"></i> Download Portfolio';
-                    document.querySelectorAll('.nav-link')[0].textContent = 'Home';
-                    document.querySelectorAll('.nav-link')[1].textContent = 'About';
-                    document.querySelectorAll('.nav-link')[2].textContent = 'Skills';
-                    document.querySelectorAll('.nav-link')[3].textContent = 'Contact';
-                    document.querySelectorAll('.footer-link')[0].textContent = 'Home';
-                    document.querySelectorAll('.footer-link')[1].textContent = 'About';
-                    document.querySelectorAll('.footer-link')[2].textContent = 'Skills';
-                    document.querySelectorAll('.footer-link')[3].textContent = 'Contact';
-                } else {
-                    // Traduzir para português
-                    translateBtn.textContent = 'EN';
-                    document.querySelector('.hero-subtitle').textContent = 'Designer Multimédia & Desenvolvedor Web';
-                    document.querySelector('.hero-description').textContent = 'Crio experiências digitais impressionantes combinando design criativo e desenvolvimento técnico para dar vida às suas ideias.';
-                    document.querySelector('#download-cv').textContent = 'Descarregar Currículo';
-                    document.querySelector('#download-portfolio').textContent = 'Descarregar Portfólio';
-                    document.querySelector('.section-title').textContent = 'Sobre Mim';
-                    document.querySelector('.about-skills h3').textContent = 'Principais Competências';
-                    document.querySelectorAll('.skill-tag')[0].textContent = 'Desenvolvimento Front-end';
-                    document.querySelectorAll('.skill-tag')[1].textContent = 'Desenvolvimento Back-end';
-                    document.querySelectorAll('.skill-tag')[2].textContent = 'Design UI/UX';
-                    document.querySelector('.skills .section-title').textContent = 'Habilidades Técnicas';
-                    document.querySelectorAll('.category-title')[0].innerHTML = '<i class="fas fa-palette"></i> Design & Multimédia';
-                    document.querySelectorAll('.category-title')[1].innerHTML = '<i class="fas fa-code"></i> Desenvolvimento Web';
-                    document.querySelector('.skills-showcase .section-title').textContent = 'Minhas Especialidades';
-                    document.querySelectorAll('.showcase-title')[0].textContent = 'Desenvolvimento Front-end';
-                    document.querySelectorAll('.showcase-description')[0].textContent = 'Crio interfaces modernas e responsivas utilizando as mais recentes tecnologias web. Foco em performance, acessibilidade e experiência do utilizador para garantir que cada projeto seja visualmente impressionante e funcional em todos os dispositivos.';
-                    document.querySelectorAll('.showcase-title')[1].textContent = 'Desenvolvimento Back-end';
-                    document.querySelectorAll('.showcase-description')[1].textContent = 'Desenvolvo APIs robustas e sistemas server-side que garantem performance e segurança. Utilizo as melhores práticas de desenvolvimento para criar soluções escaláveis que atendem às necessidades específicas de cada projeto.';
-                    document.querySelectorAll('.showcase-title')[2].textContent = 'Design & Multimédia';
-                    document.querySelectorAll('.showcase-description')[2].textContent = 'Combino criatividade e técnica para criar identidades visuais impactantes e conteúdos multimédia envolventes. Desde branding até motion graphics, cada projeto é tratado com atenção aos detalhes e foco na comunicação visual eficaz.';
-                    document.querySelector('.contact .section-title').textContent = 'Contactos';
-                    document.querySelector('.download-section h3').textContent = 'Documentos';
-                    document.querySelector('#download-cv-contact').innerHTML = '<i class="fas fa-download"></i> Descarregar Currículo';
-                    document.querySelector('#download-portfolio-contact').innerHTML = '<i class="fas fa-download"></i> Descarregar Portfólio';
-                    document.querySelectorAll('.nav-link')[0].textContent = 'Início';
-                    document.querySelectorAll('.nav-link')[1].textContent = 'Sobre';
-                    document.querySelectorAll('.nav-link')[2].textContent = 'Habilidades';
-                    document.querySelectorAll('.nav-link')[3].textContent = 'Contato';
-                    document.querySelectorAll('.footer-link')[0].textContent = 'Início';
-                    document.querySelectorAll('.footer-link')[1].textContent = 'Sobre';
-                    document.querySelectorAll('.footer-link')[2].textContent = 'Habilidades';
-                    document.querySelectorAll('.footer-link')[3].textContent = 'Contato';
-                }
             });
 
             // Animação de revelação ao scroll
