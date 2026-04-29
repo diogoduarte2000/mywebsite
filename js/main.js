@@ -268,7 +268,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         roles: [
                             'Desenvolvedor Web',
                             'Web Designer',
-                            'Designer de Motion Graphics',
+                            'Multimedia Developer',
                             'Desenvolvedor Freelance'
                         ],
                         descriptions: [
@@ -285,12 +285,12 @@ document.addEventListener('DOMContentLoaded', function() {
                             'HTML5',
                             'Design UI/UX',
                             'Adobe Suite',
-                            'Figma',
+                            'Adobe XD',
                             'Adobe Photoshop',
                             'Adobe Illustrator',
                             'HTML5',
                             'CSS3',
-                            'Figma',
+                            'Adobe XD',
                             'Design Responsivo',
                             'After Effects',
                             'Premiere Pro',
@@ -306,6 +306,8 @@ document.addEventListener('DOMContentLoaded', function() {
                             'SQL',
                             'APIs REST',
                             'TypeScript',
+                            'WebGL',
+                            'Three.js',
                             'Adobe Suite'
                         ]
                     },
@@ -388,7 +390,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         roles: [
                             'Web Developer',
                             'Web Designer',
-                            'Motion Graphics Designer',
+                            'Multimedia Developer',
                             'Freelance Developer'
                         ],
                         descriptions: [
@@ -405,12 +407,12 @@ document.addEventListener('DOMContentLoaded', function() {
                             'HTML5',
                             'UI/UX Design',
                             'Adobe Suite',
-                            'Figma',
+                            'Adobe XD',
                             'Adobe Photoshop',
                             'Adobe Illustrator',
                             'HTML5',
                             'CSS3',
-                            'Figma',
+                            'Adobe XD',
                             'Responsive Design',
                             'After Effects',
                             'Premiere Pro',
@@ -426,6 +428,8 @@ document.addEventListener('DOMContentLoaded', function() {
                             'SQL',
                             'REST APIs',
                             'TypeScript',
+                            'WebGL',
+                            'Three.js',
                             'Adobe Suite'
                         ]
                     },
