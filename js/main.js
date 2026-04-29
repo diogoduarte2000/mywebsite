@@ -274,7 +274,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         descriptions: [
                             'Desenvolvedor Web especializado na cria\u00e7\u00e3o de websites, branding e suportes visuais para campanhas digitais. Respons\u00e1vel pelo design e desenvolvimento front-end de plataformas web e materiais gr\u00e1ficos para marketing digital.',
                             'Atua\u00e7\u00e3o como Web Designer, desenvolvendo websites, landing pages e suportes visuais para campanhas digitais. Trabalho com design responsivo, identidade visual e otimiza\u00e7\u00e3o de interfaces para melhor experi\u00eancia do utilizador.',
-                            'Designer especializado em anima\u00e7\u00f5es e motion graphics. Respons\u00e1vel pela produ\u00e7\u00e3o de conte\u00fados animados, v\u00eddeos promocionais e materiais gr\u00e1ficos para campanhas digitais e redes sociais.',
+                            'Multimedia Developer especializado em cria\u00e7\u00e3o de conte\u00fados digitais, anima\u00e7\u00f5es e motion graphics. Respons\u00e1vel pela produ\u00e7\u00e3o de v\u00eddeos promocionais, materiais gr\u00e1ficos e desenvolvimento de solu\u00e7\u00f5es multim\u00e9dia interativas para campanhas digitais e redes sociais.',
                             'Desenvolvimento de projetos freelance focados em branding, motion design e desenvolvimento web personalizado. Trabalho com clientes para criar solu\u00e7\u00f5es digitais customizadas, desde websites at\u00e9 aplica\u00e7\u00f5es web completas.'
                         ],
                         dates: ['2022 - Presente', '2021 - 2022', '2020 - 2021', '2019 - Presente'],
