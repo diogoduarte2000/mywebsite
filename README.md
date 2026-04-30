@@ -1,8 +1,22 @@
 # Portfólio Diogo Duarte
 
-> **Multimedia Designer & Web Developer**
-> 
-> Website portfolio pessoal com design moderno, animações 3D interativas e sistema de internacionalização (PT/EN).
+**Website portfolio pessoal interativo | Multimedia Designer & Web Developer**
+
+[![Live Demo](https://img.shields.io/badge/Live-Demo-blue)](https://diogoduarte2000.github.io/mywebsite/)
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-black)](https://github.com/diogoduarte2000/mywebsite)
+
+> 🎨 **Design moderno e dark theme** com esfera 3D animada em WebGL/Canvas
+> 🌐 **Bilingue** (PT/EN) com sistema de tradução completo  
+> 📱 **Totalmente responsivo** para mobile e desktop
+> ⚡ **Performance otimizada** com animações suaves
+
+---
+
+## 📋 Descrição do Projeto
+
+Este portfólio apresenta as competências e experiências profissionais de **Diogo Duarte** como **Web Developer** e **Multimedia Developer**. O destaque principal é uma **esfera 3D interativa** construída com JavaScript puro e Canvas API, que responde ao movimento do rato criando uma experiência visual imersiva.
+
+O projeto foi desenvolvido com foco em **performance**, **acessibilidade** e **design moderno**, utilizando apenas tecnologias nativas da web (HTML5, CSS3, JavaScript Vanilla) sem dependências externas.
 
 ---
 
