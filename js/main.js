@@ -239,45 +239,41 @@ document.addEventListener('DOMContentLoaded', function() {
                             'APIs REST',
                             'Design Responsivo',
                             'Motion Graphics',
-                            'Edi\u00e7\u00e3o de V\u00eddeo'
+                            'Edição de Vídeo'
                         ]
                     },
                     skills: {
-                        title: 'Habilidades T\u00e9cnicas',
-                        categories: ['Design & Multim\u00e9dia', 'Desenvolvimento Web', 'Bases de Dados & Ferramentas']
+                        title: 'Habilidades Técnicas',
+                        categories: ['Design & Multimédia', 'Desenvolvimento Web', 'Bases de Dados & Ferramentas']
                     },
                     specialties: {
                         title: 'Minhas Especialidades',
                         items: [
                             {
                                 title: 'Desenvolvimento Front-end',
-                                description: 'Crio interfaces modernas e responsivas utilizando as mais recentes tecnologias web. Foco em performance, acessibilidade e experi\u00eancia do utilizador para garantir que cada projeto seja visualmente impressionante e funcional em todos os dispositivos.'
+                                description: 'Crio interfaces modernas e responsivas utilizando as mais recentes tecnologias web. Foco em performance, acessibilidade e experiência do utilizador para garantir que cada projeto seja visualmente impressionante e funcional em todos os dispositivos.'
                             },
                             {
                                 title: 'Desenvolvimento Back-end',
-                                description: 'Desenvolvo APIs robustas e sistemas server-side que garantem performance e seguran\u00e7a. Utilizo as melhores pr\u00e1ticas de desenvolvimento para criar solu\u00e7\u00f5es escal\u00e1veis que atendem \u00e0s necessidades espec\u00edficas de cada projeto.'
+                                description: 'Desenvolvo APIs robustas e sistemas server-side que garantem performance e segurança. Utilizo as melhores práticas de desenvolvimento para criar soluções escaláveis que atendem às necessidades específicas de cada projeto.'
                             },
                             {
-                                title: 'Design & Multim\u00e9dia',
-                                description: 'Combino criatividade e t\u00e9cnica para criar identidades visuais impactantes e conte\u00fados multim\u00e9dia envolventes. Desde branding at\u00e9 motion graphics, cada projeto \u00e9 tratado com aten\u00e7\u00e3o aos detalhes e foco na comunica\u00e7\u00e3o visual eficaz.'
+                                title: 'Design & Multimédia',
+                                description: 'Combino criatividade e técnica para criar identidades visuais impactantes e conteúdos multimédia envolventes. Desde branding até motion graphics, cada projeto é tratado com atenção aos detalhes e foco na comunicação visual eficaz.'
                             }
                         ]
                     },
                     experience: {
-                        title: 'Experi\u00eancia Profissional',
+                        title: 'Experiência Profissional',
                         roles: [
-                            'Desenvolvedor Web',
-                            'Web Designer',
-                            'Multimedia Developer',
-                            'Desenvolvedor Freelance'
+                            'Desenvolvedor Web & Web Designer',
+                            'Multimedia Developer'
                         ],
                         descriptions: [
-                            'Desenvolvedor Web especializado na cria\u00e7\u00e3o de websites, branding e suportes visuais para campanhas digitais. Respons\u00e1vel pelo design e desenvolvimento front-end de plataformas web e materiais gr\u00e1ficos para marketing digital.',
-                            'Atua\u00e7\u00e3o como Web Designer, desenvolvendo websites, landing pages e suportes visuais para campanhas digitais. Trabalho com design responsivo, identidade visual e otimiza\u00e7\u00e3o de interfaces para melhor experi\u00eancia do utilizador.',
-                            'Multimedia Developer especializado em cria\u00e7\u00e3o de conte\u00fados digitais, anima\u00e7\u00f5es e motion graphics. Respons\u00e1vel pela produ\u00e7\u00e3o de v\u00eddeos promocionais, materiais gr\u00e1ficos e desenvolvimento de solu\u00e7\u00f5es multim\u00e9dia interativas para campanhas digitais e redes sociais.',
-                            'Desenvolvimento de projetos freelance focados em branding, motion design e desenvolvimento web personalizado. Trabalho com clientes para criar solu\u00e7\u00f5es digitais customizadas, desde websites at\u00e9 aplica\u00e7\u00f5es web completas.'
+                            'Desenvolvedor Web e Web Designer com especialização em desenvolvimento front-end utilizando React, Next.js e Vue.js. Experiência em WebGL e Three.js para experiências 3D interativas, consumo de APIs RESTful e otimização de performance. Desenvolvimento de interfaces responsivas e colaboração com equipas de marketing para campanhas digitais.',
+                            'Multimedia Developer especializado em desenvolvimento de conteúdos digitais interativos, motion graphics e animações 3D/2D. Colaboração direta com equipa de marketing na criação de campanhas visuais, desenvolvimento de assets para redes sociais, vídeos promocionais e apresentações multimédia.'
                         ],
-                        dates: ['2022 - Presente', '2021 - 2022', '2020 - 2021', '2019 - Presente'],
+                        dates: ['2021 - Presente', '2020 - 2021'],
                         tags: [
                             'React',
                             'JavaScript',
@@ -297,7 +293,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             'Photoshop',
                             'Illustrator',
                             'Motion Design',
-                            'Edi\u00e7\u00e3o de V\u00eddeo',
+                            'Edição de Vídeo',
                             'Next.js',
                             'React',
                             'Vue.js',
@@ -313,12 +309,12 @@ document.addEventListener('DOMContentLoaded', function() {
                     },
                     contact: {
                         title: 'Contactos',
-                        labels: ['Email', 'Telefone', 'Localiza\u00e7\u00e3o'],
+                        labels: ['Email', 'Telefone', 'Localização'],
                         documentsTitle: 'Documentos',
-                        buttons: ['Descarregar Curr\u00edculo', 'Descarregar Portf\u00f3lio']
+                        buttons: ['Descarregar Currículo', 'Descarregar Portfólio']
                     },
                     footer: {
-                        subtitle: 'Designer Multim\u00e9dia & Desenvolvedor Web',
+                        subtitle: 'Designer Multimédia & Desenvolvedor Web',
                         rights: 'Todos os direitos reservados.'
                     }
                 },
@@ -388,18 +384,14 @@ document.addEventListener('DOMContentLoaded', function() {
                     experience: {
                         title: 'Professional Experience',
                         roles: [
-                            'Web Developer',
-                            'Web Designer',
-                            'Multimedia Developer',
-                            'Freelance Developer'
+                            'Web Developer & Web Designer',
+                            'Multimedia Developer'
                         ],
                         descriptions: [
-                            'Web Developer specialized in creating websites, branding, and visual assets for digital campaigns. Responsible for the front-end design and development of web platforms and graphic materials for digital marketing.',
-                            'Worked as a Web Designer, developing websites, landing pages, and visual assets for digital campaigns. Focused on responsive design, visual identity, and interface optimization for a better user experience.',
-                            'Multimedia Developer specialized in creating digital content, animations and motion graphics. Responsible for producing promotional videos, graphic materials and developing interactive multimedia solutions for digital campaigns and social media.',
-                            'Development of freelance projects focused on branding, motion design, and custom web development. Working with clients to create tailored digital solutions, from websites to complete web applications.'
+                            'Web Developer and Web Designer specialized in front-end development using React, Next.js and Vue.js. Experience with WebGL and Three.js for interactive 3D experiences, RESTful API integration and performance optimization. Development of responsive interfaces and collaboration with marketing teams for digital campaigns.',
+                            'Multimedia Developer specialized in interactive digital content development, motion graphics and 3D/2D animations. Direct collaboration with marketing team in creating visual campaigns, developing assets for social media, promotional videos and multimedia presentations.'
                         ],
-                        dates: ['2022 - Present', '2021 - 2022', '2020 - 2021', '2019 - Present'],
+                        dates: ['2021 - Present', '2020 - 2021'],
                         tags: [
                             'React',
                             'JavaScript',
