@@ -299,7 +299,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     },
                     contact: {
                         title: 'Contactos',
-                        labels: ['Email', 'Telefone', 'Localização'],
+                        labels: ['Email', 'Telefone', 'Localização', 'GitLab'],
                         documentsTitle: 'Documentos',
                         buttons: ['Descarregar Currículo', 'Descarregar Portfólio']
                     },
@@ -407,7 +407,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     },
                     contact: {
                         title: 'Contact',
-                        labels: ['Email', 'Phone', 'Location'],
+                        labels: ['Email', 'Phone', 'Location', 'GitLab'],
                         documentsTitle: 'Documents',
                         buttons: ['Download CV', 'Download Portfolio']
                     },
