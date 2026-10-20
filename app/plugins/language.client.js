@@ -118,8 +118,6 @@ const translations = {
   'Resposta em 24h': 'Replies within 24 hours',
   'Vamos': "Let's",
   'falar?': 'talk?',
-  'Full-time, híbrido ou remoto. Também aceito freelance através da\n        v.graphiks, sobretudo quando o projeto junta web e design.':
-    'Full-time, hybrid or remote. I also take on freelance work through\n        v.graphiks, especially when a project combines web and design.',
   'Descarregar PDF ↓': 'Download PDF ↓',
   'Currículo': 'Resume',
   'Lisboa, PT': 'Lisbon, PT',

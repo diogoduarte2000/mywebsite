@@ -313,8 +313,6 @@ useHead({
     <div class="contact">
       <div>
         <h2 class="big">Vamos<br><em>falar?</em></h2>
-        <p class="prose" style="margin-top:22px">Full-time, híbrido ou remoto. Também aceito freelance através da
-        v.graphiks, sobretudo quando o projeto junta web e design.</p>
       </div>
       <div>
         <a class="crow" href="https://www.linkedin.com/in/diogo-duarte-471a221b6/" target="_blank" rel="noopener"><span class="k">LinkedIn</span><span class="v">/in/diogo-duarte ↗</span></a>
